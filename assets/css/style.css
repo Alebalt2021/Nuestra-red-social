@@ -1,3 +1,28 @@
 .fondo {
     background: linear-gradient(90deg, #FF0037, rgba(255,144,168,1), rgba(255,144,168,1))
 }
+.btn-post{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imgUser{
+    width:300px;
+    height:300px;
+    border-radius:150px;
+    border:10px solid #666;
+}
+.userName{
+    text-align: center;
+    position: relative;
+}
+.imgDeUsuario{
+    display: flex;
+    position: relative;
+    justify-content: center;
+	align-items: center;
+}
+.containerFooter{
+    max-width: none;
+    padding-left: none;
+}
