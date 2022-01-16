@@ -12,59 +12,64 @@
 </head>
 
 <body class="fondo">
-    <nav class="navbar navbar-light bg-light mb-5">
+    <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <img src="#" alt="" width="30" height="24" class="d-inline-block align-text-top">
                 Kpopers
             </a>
             <div class="d-flex">
-                <button id="logout" class="btn btn-outline-success">Salir</button>
+                <button id="logout" class="btn btn-outline">Salir</button>
             </div>
         </div>
     </nav>
-
-    <div class="card bg-dark text-white mx-auto" id="contenidoWeb" style="border-radius: 1rem; width: 1000px;">
-        <div class="card-body">
-            <form id="postForm" action="">
-                <h5>Escribe tu mensaje</h5>
-                <label class="form-label" for="postText">Mensaje</label>
-                <div class="form-outline form-white mb-4">
-                    <textarea class="form-control form-control-lg" id="postText" rows="3"></textarea>
+    <div class="containerGeneral">
+        <div>
+            <div class="card bg-dark text-white mx-auto" id="contenidoWeb">
+                <div class="card-body">
+                    <form id="postForm" action="">
+                        <label class="form-label" for="postText"></label>
+                        <div class="form-outline form-white mb-4">
+                            <textarea placeholder="¿Qué estas pensando?" class="form-control form-control-lg"
+                                id="postText" rows="3"></textarea>
+                        </div>
+                        <div class="btn-post">
+                            <button id="btnImagenPost" class="btn btn-outline-light btn-lg px-5 mx-2" type="submit">+
+                                Agregar
+                                imagen</button>
+                            <button id="btnSendPost" class="btn btn-outline-light btn-lg px-5 mx-2"
+                                type="submit">Publicar</button>
+                        </div>
+                    </form>
                 </div>
-                <div class="btn-post">
-                    <button id="btnImagenPost" class="btn btn-outline-light btn-lg px-5 mx-2" type="submit">+ Agregar
-                        imagen</button>
-                    <button id="btnSendPost" class="btn btn-outline-light btn-lg px-5 mx-2"
-                        type="submit">Publicar</button>
+            </div>
+        </div>
+
+        <div class="container-webper position-relative">
+            <div class="bg-dark text-white mx-auto" id="user-web">
+                <div class="imgDeUsuario">
+                    <img src="https://static.vecteezy.com/system/resources/previews/002/475/741/non_2x/young-woman-profile-avatar-character-flat-style-icon-free-vector.jpg"
+                        alt="" class="imgUser">
                 </div>
-            </form>
-        </div>
-    </div>
-    </div>
+                <div class="userName">
+                    <h4>Laura</h4>
+                </div>
+            </div class="publica-list">
+            <div class="bg-dark text-white mx-auto m-3 p-5">
+                <div id="postList">
 
-    <div class="card bg-dark text-white mx-auto" id="user-web" style="border-radius: 1rem; width: 450px;">
-        <div class="imgDeUsuario">
-            <img src="https://static.vecteezy.com/system/resources/previews/002/475/741/non_2x/young-woman-profile-avatar-character-flat-style-icon-free-vector.jpg"
-                alt="" width="30" height="24" class="imgUser" style="width: 60%; height: 60%;">
-        </div>
-        <div class="userName">
-            <h4>Laura</h4>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="bg-dark text-white mx-auto m-3 p-5" style="border-radius: 1rem; width: 450px;">
-        <div id="postList">
-
-        </div>
     </div>
-
     <!-- Remove the container if you want to extend the Footer to full width. -->
     <div class="containerFooter">
 
         <!-- Footer -->
         <footer class="text-center text-lg-start text-white" style="background-color: #000000">
             <!-- Section: Social media -->
-            <section class="d-flex justify-content-between p-4" style="background-color: #FF0037">
+            <section class="d-flex justify-content-between p-4" style="background-color: #ffffff">
             </section>
             <!-- Section: Social media -->
 
@@ -78,7 +83,7 @@
                             <!-- Content -->
                             <h6 class="text-uppercase fw-bold">Company name</h6>
                             <hr class="mb-4 mt-0 d-inline-block mx-auto"
-                                style="width: 60px; background-color: #7c4dff; height: 2px" />
+                                style="width: 60px; background-color: #db4dff; height: 2px" />
                             <p>
                                 Here you can use rows and columns to organize your footer
                                 content. Lorem ipsum dolor sit amet, consectetur adipisicing

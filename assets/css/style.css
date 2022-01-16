@@ -1,16 +1,23 @@
 .fondo {
     background: linear-gradient(90deg, #FF0037, rgba(255,144,168,1), rgba(255,144,168,1))
 }
+.containerGeneral{
+    background-color: rgba(36, 28, 28, 0.596);
+    padding: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
 .btn-post{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .imgUser{
-    width:300px;
-    height:300px;
-    border-radius:150px;
-    border:10px solid #666;
+    border-radius:250px;
+    border:10px solid rgb(231, 12, 67);
+    width: 50%;
 }
 .userName{
     text-align: center;
@@ -25,4 +32,30 @@
 .containerFooter{
     max-width: none;
     padding-left: none;
+}
+.btn{
+    color: rgb(255, 255, 255);
+    background-color: #d8536f;
+}
+.btn:hover{
+    color: #000;
+    background: rgb(247, 7, 79);
+}
+.container-webper{
+    display: flex;
+    justify-content: space-between;
+}
+#user-web{
+    border-radius: 25px;
+    padding: 20px;
+    margin-top: 20px;
+}
+.publica-list{
+    margin: 10px;
+}
+.list-public{
+    padding: 10px;
+}
+#contenidoWeb{
+    border-radius: 25px;
 }
