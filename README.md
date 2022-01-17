@@ -1,25 +1,30 @@
-# (っ◔◡◔)っ 👩‍💻 𝓝𝓾𝓮𝓼𝓽𝓻𝓪-𝓻𝓮𝓭-𝓼𝓸𝓬𝓲𝓪𝓵 💙💖
-Este proyecto fue creado en grupo; es una aplicacion web que sera una red social y que constara de una estructura colectiva la cual tiene un conjunto de actores(personajes) que tienen uno o más vínculos entre ellos.
+# ❤ ᑎᑌᕮSTᖇᗩ-ᖇᕮᗪ-SOᑕIᗩᒪ 💙
+(っ◔◡◔)っ Este proyecto fue creado en grupo; es una ___aplicacion web___ que desempeñara al papel de una red social y que constara de una ___estructura colectiva___ la cual tiene un conjunto de actores(personajes) que tienen uno o más vínculos entre ellos.
 
-Es un red social
-Tema central: Kpoper / Cultura coreana
-Fecha de entrega limite: 30 de enero
+Red social 🤗 / Tema central: Kpoper - Cultura coreana ✈ / Fecha de entrega limite: 30 de enero ⏰
 
-<img src="https://pm1.narvii.com/6198/074aba04d38e046ad63cef9a2a40c8d08101ec86_hq.jpg" width="550" height="300">
+<img src="https://pa1.narvii.com/6566/1d7a4d554583f6af46702cfefbfee2657e0a0a3a_hq.gif" width="550" height="300">
 
-## __𝓟𝓻𝓸𝓬𝓮𝓼𝓸 𝓭𝓮 𝓓𝓲𝓼𝓮ñ𝓸__ 🎨
+## __ᑭᖇOᑕᕮSO ᗪᕮ ᗪISᕮÑO__ 🎨
+Durante el proceso de diseño hablamos a través del WhatsApp para coordinar; seguido nos repartimos las actividades pendientes entre todo el equipo y nos organizamos para poder cumplir las fechas de entrega. Después realizamos un prototipo de baja calidad en PowerPoint, el cual nos ayudó a conseguir una gran cantidad de información de la interacción entre la interfaz y el usuario. Luego hicimos el prototipo de alta calidad en FIGMA donde pudimos hacer varias pruebas de colores y las últimas modificaciones en cuanto a su estructura. También investigamos el significado de los colores que usamos para que así, el diseño final este equilibrado con el propósito de la página y la necesidad del cliente.
 
-## __𝓓𝓮𝓯𝓲𝓷𝓲𝓬𝓲ó𝓷 𝓭𝓮𝓵 𝓹𝓻𝓸𝓭𝓾𝓬𝓽𝓸__ 🎯
+## __ᗪᕮᖴIᑎIᑕIÓᑎ ᗪᕮᒪ ᑭᖇOᗪᑌᑕTO__ 🎯
 
-- **¿Quiénes son los principales usuarios del producto?** Son todas aquellas personas interesadas en la cultura coreana, sobre todo en su música.
+- **¿Qᥙιᥱ́ᥒᥱs soᥒ ᥣos ρrιᥒᥴιρᥲᥣᥱs ᥙsᥙᥲrιos dᥱᥣ ρrodᥙᥴto?** Los principales usuarios del producto son los jovenes limeños entre los 15 y 35 años de edad que estan interesados en la cultura coreana.
 
-- **¿Cuáles son los objetivos de estos usuarios en relación con tu producto?** Poder interactuar, compartir y conocer a más personas con su mismo gusto por el kpop.
+- **¿Cᥙᥲ́ᥣᥱs soᥒ ᥣos objᥱtιvos dᥱ ᥱstos ᥙsᥙᥲrιos ᥱᥒ rᥱᥣᥲᥴιóᥒ ᥴoᥒ tᥙ ρrodᥙᥴto?** Los objetivos de estos usuarios en relacion con nuestro producto son comunicarse y compartir con los demás sus gustos y aficiones por la cultura coreana.
 
-- **¿Cómo crees que el producto que estás creando está resolviendo sus problemas?** Este pagina tendrá la función de crear y subir publicaciones, para así poder compartir información y conocer nuevas modas o novedades asiáticas de todo los  ámbitos.
+- **¿Cómo ᥴrᥱᥱs qᥙᥱ ᥱᥣ ρrodᥙᥴto qᥙᥱ ᥱstᥲ́s ᥴrᥱᥲᥒdo ᥱstᥲ́ rᥱsoᥣvιᥱᥒdo sᥙs ρrobᥣᥱmᥲs?** El producto que estamos creando esta resolviendo los problemas de nuestros usuarios ya que les brinda un sitio web donde puedan compartir informacion con otras personas que comparten sus gustos y a su ves puedan enterarse de las novedades coreanas en todos los ambitos. 
 
+## __ᕼISTOᖇIᗩS ᗪᕮ ᑌSᑌᗩᖇIOS__ 👩‍💼
+(Experiencias con los usuarios y conclusiones)
 
-## __𝓗𝓲𝓼𝓽𝓸𝓻𝓲𝓪𝓼 𝓭𝓮 𝓾𝓼𝓾𝓪𝓻𝓲𝓸__ 👩‍💼
+## __ᑭᖇOTOTIᑭO ᗪᕮ ᗷᗩᒍᗩ ᖴIᗪᕮᒪIᗪᗩᗪ__ 📁
+<p float="left">
+  <img src="https://github.com/Alebalt2021/Nuestra-red-social/blob/main/assets/img/Diapositiva2.JPG?raw=true" width="450" height="250" /> 
+  <img src="https://github.com/Alebalt2021/Nuestra-red-social/blob/main/assets/img/Diapositiva3.JPG?raw=true" width="450" height="250" /> 
+  <img src="https://github.com/Alebalt2021/Nuestra-red-social/blob/main/assets/img/Diapositiva4.JPG?raw=true" width="450" height="250" /> 
+  <img src="https://github.com/Alebalt2021/Nuestra-red-social/blob/main/assets/img/Diapositiva5.JPG?raw=true" width="450" height="250" /> 
+</p>
 
-## 𝓟𝓻𝓸𝓽𝓸𝓽𝓲𝓹𝓸 𝓭𝓮 𝓫𝓪𝓳𝓪 𝓯𝓲𝓭𝓮𝓵𝓲𝓭𝓪𝓭 📁
-
-## __Prototipo de alta fidelidad__ 🔮
+## __ᑭᖇOTOTIᑭO ᗪᕮ ᗩᒪTᗩ ᖴIᗪᕮᒪIᗪᗩᗪ__ 🔮
