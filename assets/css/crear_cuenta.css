@@ -1,0 +1,105 @@
+body {
+    background-image: url(https://s-media-cache-ak0.pinimg.com/originals/e8/50/a3/e850a34234b02d2ccece68c65aa8338a.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+/***** MAIN *****/
+/* Crear cuenta #1 */
+.main-section {
+    margin: 0 auto;
+    margin-top: 25%;
+    padding: 0;
+}
+.modal-content {
+    background-color: black;
+    opacity: .85;
+    padding: 0 20px;
+    border-radius: 14px;
+}
+.user-img {
+    margin-top: -50px;
+    margin-bottom: 35px;
+}
+.user-img img {
+    width: 140px;
+    height: 140px;
+    box-shadow: 0px 0px 3px rebeccapurple;
+    border-radius: 50%;
+}
+.form-group input {
+    height: 42px;
+    font-size: 18px;
+    border: 0;
+}
+.form-control {
+    background: rgba(255, 255, 255, 0.404);
+    border-style: none;
+    transition: 0.5s ease-in;
+    outline: none;
+    box-shadow: none;
+    color: black; /*Letra de los inputs*/
+}
+.form-control:focus {
+    background: none;
+    box-shadow: none;
+    outline: none;
+    color: white;
+}
+.form-control::placeholder {
+    color: rgb(255, 255, 255);
+}
+
+.ingresar {
+    padding: 10px;
+    font-family: 'Fredoka One', cursive;
+    font-size: 16px;
+    font-weight: 700!important;
+    color: white;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.568);
+    transition: 0.5s ease-in;
+    letter-spacing: 2px;
+    background: linear-gradient(90deg, #F3B1BD, #C7B3D6, #A1C4E8)
+}
+
+.tituloM {
+    font-family: 'Jua', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.parrafoM {
+    font-family: 'Mali', cursive;
+}
+.condicionesM {
+    font-size: 14px;
+    color: rgb(122, 122, 122);
+    font-weight: 600;
+}
+
+.cuadro2 {
+    display: flex;
+    height: 50px;
+    width: 375px;
+}
+
+.title-pag {
+    font-family: 'Fredoka One', cursive;
+    font-size: 35px;
+    letter-spacing: 0.021em;
+}
+
+.volver {
+    color: rgb(206, 206, 206);
+    font-weight: 400;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.fondo {
+    background-color: black;
+    opacity: .85;
+    border-radius: 14px;
+}
