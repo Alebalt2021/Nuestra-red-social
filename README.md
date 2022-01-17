@@ -21,10 +21,10 @@ Durante el proceso de diseño hablamos a través del WhatsApp para coordinar; se
 
 ## __ᑭᖇOTOTIᑭO ᗪᕮ ᗷᗩᒍᗩ ᖴIᗪᕮᒪIᗪᗩᗪ__ 📁
 <p float="left">
-  <img src="https://github.com/Alebalt2021/Nuestra-red-social/blob/main/assets/img/Diapositiva2.JPG?raw=true" width="450" height="250" /> 
-  <img src="https://github.com/Alebalt2021/Nuestra-red-social/blob/main/assets/img/Diapositiva3.JPG?raw=true" width="450" height="250" /> 
-  <img src="https://github.com/Alebalt2021/Nuestra-red-social/blob/main/assets/img/Diapositiva4.JPG?raw=true" width="450" height="250" /> 
-  <img src="https://github.com/Alebalt2021/Nuestra-red-social/blob/main/assets/img/Diapositiva5.JPG?raw=true" width="450" height="250" /> 
+  <img src="https://github.com/Alebalt2021/Nuestra-red-social/blob/main/assets/img/Diapositiva2.JPG?raw=true" width="400" height="200" /> 
+  <img src="https://github.com/Alebalt2021/Nuestra-red-social/blob/main/assets/img/Diapositiva3.JPG?raw=true" width="400" height="200" /> 
+  <img src="https://github.com/Alebalt2021/Nuestra-red-social/blob/main/assets/img/Diapositiva4.JPG?raw=true" width="400" height="200" /> 
+  <img src="https://github.com/Alebalt2021/Nuestra-red-social/blob/main/assets/img/Diapositiva5.JPG?raw=true" width="400" height="200" /> 
 </p>
 
 ## __ᑭᖇOTOTIᑭO ᗪᕮ ᗩᒪTᗩ ᖴIᗪᕮᒪIᗪᗩᗪ__ 🔮
