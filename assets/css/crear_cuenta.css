@@ -14,42 +14,58 @@ body {
     padding: 0;
 }
 .modal-content {
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     opacity: .85;
     padding: 0 20px;
     border-radius: 14px;
+    
 }
 .user-img {
     margin-top: -50px;
     margin-bottom: 35px;
 }
 .user-img img {
-    width: 140px;
-    height: 140px;
-    box-shadow: 0px 0px 3px rebeccapurple;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
+    border: 1px solid #9e9a9ed5;
 }
+
+.img-login {
+    margin-top: -50px;
+    margin-bottom: 5px;
+}
+.img-login img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 1px solid #9e9a9ed5;
+}
+
+
 .form-group input {
+    color: black;
     height: 42px;
     font-size: 18px;
     border: 0;
+    border: rgb(156, 153, 153) 1px solid;
+    margin-top:10px;
+
 }
 .form-control {
-    background: rgba(255, 255, 255, 0.404);
-    border-style: none;
+    background: rgba(221, 213, 213, 0.5);
     transition: 0.5s ease-in;
     outline: none;
     box-shadow: none;
-    color: black; /*Letra de los inputs*/
+    color: rgb(31, 30, 30); /*Letra de los inputs*/
 }
 .form-control:focus {
-    background: none;
-    box-shadow: none;
-    outline: none;
-    color: white;
+    background: rgb(209, 209, 209);
+    transition: 0.2s;
+    color: rgb(211, 210, 210);
 }
 .form-control::placeholder {
-    color: rgb(255, 255, 255);
+    color: rgba(83, 83, 83, 0.589);
 }
 
 .ingresar {
@@ -59,15 +75,17 @@ body {
     font-weight: 700!important;
     color: white;
     box-shadow: 0 0 5px rgba(255, 255, 255, 0.568);
-    transition: 0.5s ease-in;
+    transition: 0.8s ease-in;
     letter-spacing: 2px;
-    background: linear-gradient(90deg, #F3B1BD, #C7B3D6, #A1C4E8)
+    background: linear-gradient(90deg, #F3B1BD, #C7B3D6, #A1C4E8);
+    margin-top: 6px;
 }
 
 .tituloM {
     font-family: 'Jua', sans-serif;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 700;
+    text-shadow: #C75CB9 0px 0px 8px;
 }
 
 .parrafoM {
@@ -75,8 +93,9 @@ body {
 }
 .condicionesM {
     font-size: 14px;
-    color: rgb(122, 122, 122);
-    font-weight: 600;
+    padding: 16px 0px;
+    color: rgb(161, 152, 152);
+    font-weight: 400;
 }
 
 .cuadro2 {
@@ -92,14 +111,22 @@ body {
 }
 
 .volver {
-    color: rgb(206, 206, 206);
+    color: rgb(131, 129, 129);
     font-weight: 400;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding: 2px;
+    margin: 10px;
 }
 
-.fondo {
-    background-color: black;
-    opacity: .85;
-    border-radius: 14px;
+.buttons-accont{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+
+.buttons-accont button{
+    background: linear-gradient(90deg, #F3B1BD, #C7B3D6, #A1C4E8);
+    margin: 6px;
+    border-radius: 45%;
+    border: none;
+    padding: 2px;
 }
