@@ -23,6 +23,9 @@
     display: flex;
     margin: auto;
     justify-content: center;
+    font-size: 18px;
+    font-family: 'Fredoka One', cursive;
+    letter-spacing: 3px
 }
 
 .botones-publish button{
@@ -156,6 +159,9 @@
 .containerFooter{
     max-width: none;
     padding-left: none;
+}
+.letraF {
+    font-family: 'Quicksand', sans-serif;
 }
 .btn{
     color: rgb(255, 255, 255);
