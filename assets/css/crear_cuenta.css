@@ -49,7 +49,7 @@ body {
     font-size: 18px;
     border: 0;
     border: rgb(156, 153, 153) 1px solid;
-    margin-top:10px;
+    margin-top:14px;
 
 }
 .form-control {
@@ -57,15 +57,15 @@ body {
     transition: 0.5s ease-in;
     outline: none;
     box-shadow: none;
-    color: rgb(31, 30, 30); /*Letra de los inputs*/
+    color: rgb(83, 76, 76); /*Letra de los inputs*/
 }
 .form-control:focus {
     background: rgb(209, 209, 209);
     transition: 0.2s;
-    color: rgb(211, 210, 210);
+    color: rgb(41, 41, 41);
 }
 .form-control::placeholder {
-    color: rgba(83, 83, 83, 0.589);
+    color: rgb(97, 92, 92);
 }
 
 .ingresar {
@@ -78,7 +78,7 @@ body {
     transition: 0.8s ease-in;
     letter-spacing: 2px;
     background: linear-gradient(90deg, #F3B1BD, #C7B3D6, #A1C4E8);
-    margin-top: 6px;
+    margin-top: 10px;
 }
 
 .tituloM {
@@ -125,8 +125,47 @@ body {
 
 .buttons-accont button{
     background: linear-gradient(90deg, #F3B1BD, #C7B3D6, #A1C4E8);
-    margin: 6px;
+    margin: 2px;
     border-radius: 45%;
     border: none;
-    padding: 2px;
+    padding: 8px;
+    border: rgb(156, 153, 153) 1px solid;
+
+}
+
+/* RESPONSIVE */
+@media screen and (max-width:570px) {
+    .form-group{
+        display:flex;
+        flex-direction: column;
+    }
+    .form-group button{
+        margin: 10px 60px;
+    }
+}
+@media screen and (max-width:500px) {
+    .btn-close{
+        display: none;
+    }
+
+    .modal-content {
+        margin: 100px auto ;
+        padding: 30px 20px;
+        
+    }
+}
+@media screen and (max-width:380px){
+
+    .modal-content {
+        margin: 120px 0 60px 0;
+        background-color: rgb(255, 255, 255);
+        opacity: .85;
+        padding: 0 16px;
+        
+    }
+
+    .form-group button{
+        margin: 10px 5px;
+    }
+
 }
