@@ -8,8 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!--CDN de iconos-->
     <script src="https://kit.fontawesome.com/5a3c30ad6c.js" crossorigin="anonymous"></script>
-    <!--CSS personalizado-->
-    <link rel="stylesheet" href="assets/css/crear_cuenta.css">
+    
     <title>  Kpopers</title>
     <!--CDN de Google Font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,6 +20,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Mali:wght@500&display=swap" rel="stylesheet">
     <!-- icono -->
     <link rel="icon" href="https://play-lh.googleusercontent.com/ZUGvRmS6sU9Oc4cnK7VfFQ9AJN7wI42eq1pZ3QBLJ1Y1QII6Xty9iNFcQHccX4LyCs5E">
+    <!--CSS personalizado-->
+    <link rel="stylesheet" href="assets/css/crear_cuenta.css">
+
 </head>
 <body>
     <!--HEADER-->
@@ -31,7 +33,7 @@
                 KPOPERS
             </a>
             <form class="d-flex">
-                <button class="btn ingresar"><i class="fas fa-sign-out-alt lead me-2"></i>Salir</button>
+                <button class="btn ingresar btn-close"><i class="fas fa-sign-out-alt lead me-2"></i></button>
             </form>
         </div>
     </nav>
@@ -54,20 +56,20 @@
                         </div>
                         
                         <div class="form-group mx-sm-4 pb-2">
-                            <input type="email" class="form-control parrafoM" placeholder="Correo electronico">
+                            <input type="email" id="mail" class="form-control parrafoM" placeholder="Correo electronico">
                         </div>
                         <div class="form-group mx-sm-4 pb-2">
-                            <input type="password" class="form-control parrafoM" placeholder="Contraseña">
+                            <input type="password" id="pass" class="form-control parrafoM" placeholder="Contraseña">
                         </div>
                         <div class="form-group mx-sm-4 pb-2 " >
-                            <button id="btn-register" type="submit" class="btn btn-block ingresar"><i class="far fa-check-circle lead"></i> INICIA SESIÓN</button>
+                            <button id="btn-login" type="submit" class="btn btn-block ingresar"><i class="far fa-check-circle lead"></i> INICIA SESIÓN</button>
                             <label class="form-label condicionesM">O iniciar sesión con:</label>
                             <div class="buttons-accont">
                                 <button><img src="assets/img/icons/svg/bxl-google.svg" alt="google"></button>
                                 <button><img src="assets/img/icons/svg/bxl-facebook.svg" alt="faceboock"></button>
                             </div>
                         </div>
-                        <p class="volver">¿No tienes una cuenta? <a href="#">Registrarte</a></p>
+                        <p class="volver">¿No tienes una cuenta? <a href="#" id="btn-register" >Registrarte</a></p>
 
                     </form>
                 </div>
@@ -97,19 +99,19 @@
                             <h1 id="h1" class="text-light tituloM ">CREAR CUENTA</h1>
                         </div>
                         <div class="form-group mx-sm-4 pb-2">
-                            <input type="text" class="form-control parrafoM" placeholder="Nombre completo">
+                            <input id="name-new" type="text" class="form-control parrafoM" placeholder="Nombre completo">
                         </div>
                         <div class="form-group mx-sm-4 pb-2">
-                            <input type="email" class="form-control parrafoM" placeholder="Correo electronico">
+                            <input id="mail-new" type="email" class="form-control parrafoM" placeholder="Correo electronico">
                         </div>
                         <div class="form-group mx-sm-4 pb-2">
-                            <input type="password" class="form-control parrafoM" placeholder="Contraseña">
+                            <input id="pass-new" type="password" class="form-control parrafoM" placeholder="Contraseña">
                         </div>
                         <div class="form-group mx-sm-4 pb-2">
                             <label class="form-label condicionesM">Al registrarte, aceptas nuestras <a href="assets/doc/Condiciones y Políticas de Privacidad.pdf">Condiciones</a> y la <a href="assets/doc/Condiciones y Políticas de Privacidad.pdf">Politica de datos</a>.</label>
-                            <button type="submit" class="btn btn-block ingresar"><i class="far fa-check-circle lead me-2""></i>REGISTRATE</button>
+                            <button type="submit" id="btn-singup" class="btn btn-block ingresar"><i class="far fa-check-circle lead me-2""></i>REGISTRATE</button>
                         </div>
-                        <p class="volver">¿Tienes una cuenta? <a href="#">Inicia sesión</a></p>
+                        <p class="volver">¿Tienes una cuenta? <a href="#" >Inicia sesión</a></p>
 
                     </form>
                 </div>
@@ -152,7 +154,7 @@
                     data-ripple-color="light"
                 >
                     <img
-                    src="https://mdbcdn.b-cdn.net/img/new/fluid/city/113.webp"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9shjq6hv9SC7xeLO-i0KC6I_U-0idSlp-cS42FhVyG8yYaAxYV4X19U-sySnNg1doMkY&usqp=CAU"
                     class="w-100"
                     />
                     <a href="#!">
@@ -169,7 +171,7 @@
                     data-ripple-color="light"
                 >
                     <img
-                    src="https://mdbcdn.b-cdn.net/img/new/fluid/city/111.webp"
+                    src="https://i.pinimg.com/474x/85/cc/67/85cc6793dc0207ca57e41c2537307d54.jpg"
                     class="w-100"
                     />
                     <a href="#!">
@@ -186,7 +188,7 @@
                     data-ripple-color="light"
                 >
                     <img
-                    src="https://mdbcdn.b-cdn.net/img/new/fluid/city/112.webp"
+                    src="https://images.hdqwalls.com/wallpapers/thumb/saboru-maid-anime-girl-4k-ah.jpg"
                     class="w-100"
                     />
                     <a href="#!">
@@ -203,7 +205,7 @@
                     data-ripple-color="light"
                 >
                     <img
-                    src="https://mdbcdn.b-cdn.net/img/new/fluid/city/114.webp"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnmRJ_SWCy_bXIDRQ1nmIM8UjhF9aYyCDU1xxQacEDMwiWfVwf26jn4-SmyRKzOIGwX20&usqp=CAU"
                     class="w-100"
                     />
                     <a href="#!">
@@ -220,7 +222,7 @@
                     data-ripple-color="light"
                 >
                 <img
-                    src="https://mdbcdn.b-cdn.net/img/new/fluid/city/115.webp"
+                    src="https://cache.desktopnexus.com/thumbseg/2412/2412592-bigthumbnail.jpg"
                     class="w-100"
                     />
                     <a href="#!">
@@ -237,7 +239,7 @@
                     data-ripple-color="light"
                 >
                     <img
-                    src="https://mdbcdn.b-cdn.net/img/new/fluid/city/116.webp"
+                    src="https://cache.desktopnexus.com/thumbseg/2444/2444065-bigthumbnail.jpg"
                     class="w-100"
                     />
                     <a href="#!">
@@ -266,8 +268,19 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!--CDN Bootstrap JS-->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- ajax -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <!-- js normal -->
     <script src="assets/js/js.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 </body>
 </html>

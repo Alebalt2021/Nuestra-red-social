@@ -18,66 +18,80 @@
     <!-- icono -->
     <link rel="icon" href="https://play-lh.googleusercontent.com/ZUGvRmS6sU9Oc4cnK7VfFQ9AJN7wI42eq1pZ3QBLJ1Y1QII6Xty9iNFcQHccX4LyCs5E">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/crear_cuenta.css">
+
+    <!-- icono -->
+    <link rel="icon" href="https://play-lh.googleusercontent.com/ZUGvRmS6sU9Oc4cnK7VfFQ9AJN7wI42eq1pZ3QBLJ1Y1QII6Xty9iNFcQHccX4LyCs5E">
+    <title> Kpopers</title>
 </head>
 
 <body class="fondo">
+    <!-- navegador -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light p-2 shadow-sm">
         <div class="container-fluid">
             <a class="navbar-brand title-pag" href="#">
                 <img src="https://play-lh.googleusercontent.com/ZUGvRmS6sU9Oc4cnK7VfFQ9AJN7wI42eq1pZ3QBLJ1Y1QII6Xty9iNFcQHccX4LyCs5E" alt="log" width="48" height="45" class="d-inline-block align-text-top">
                 KPOPERS
             </a>
-            <div class="d-flex">
-                <button id="logout" class="btn ingresar"><i class="fas fa-sign-out-alt lead me-2"></i>Salir</button>
-            </div>
+            <form class="d-flex">
+                <button class="btn ingresar btn-close"><i class="fas fa-sign-out-alt lead me-2"></i></button>
+            </form>
         </div>
     </nav>
-    <div class="containerGeneral" id="content">
-        <div>
-            <div class="card bg-dark text-white mx-auto" id="contenidoWeb">
-                <div class="card-body">
-                    <form id="postForm" action="">
-                        <label class="form-label" for="postText"></label>
-                        <div class="form-outline form-white mb-4">
-                            <textarea placeholder="¿Qué estas pensando?" class="form-control form-control-lg"
-                                id="postText" rows="3"></textarea>
+
+    <main class="content-red-social">
+        <div class="contet-publish">
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+            <div class="botones-publish">
+                <button>Agregar img</button>
+                <button>Publicar</button>
+            </div>
+        </div>
+        <div class="contet-posts-user">
+            <div class="user-content">
+                <img src="https://cdn.discordapp.com/attachments/842291717376966696/933635850728779786/1ddc8f7b70280d9eb020237743a279a9.gif" alt="user">
+                <div class="user-parrafo">
+                    <h3>User</h3>
+                    <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio illum id natus eaque obcaecati? Veritatis, et sed praesentium error a quas neque repellendus aliquam, numquam, ea non dolor. Beatae, vitae.</p>
+                </div>
+            </div>
+            <div class="content-posts-post">
+                
+                <div class="items-post">
+                    <div class="content-parrafo-item">
+                        <div class="item-use">
+                            <img src="https://cdn.discordapp.com/attachments/842291717376966696/932995059022975066/38020d9bd6e501c1a04149bf8677fdca.jpg" alt="user">
+                            <h3>user</h3>
                         </div>
-                        <div class="btn-post">
-                            <button id="btnImagenPost" class="btn btn-outline-light btn-lg px-5 mx-2" type="submit">+
-                                Agregar
-                                imagen</button>
-                            <button id="btnSendPost" class="btn btn-outline-light btn-lg px-5 mx-2"
-                                type="submit">Publicar</button>
+                        <div class="item-p">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur rem sunt, deleniti non veniam asperiores possimus aperiam minus nemo ipsam placeat nulla iste laudantium excepturi debitis. Non neque recusandae illo?</p>
                         </div>
-                    </form>
+                    </div>
+                </div>
+
+                <div class="items-post">
+                    <div class="content-parrafo-item">
+                        <div class="item-use">
+                            <img src="https://cdn.discordapp.com/attachments/842291717376966696/932995059022975066/38020d9bd6e501c1a04149bf8677fdca.jpg" alt="user">
+                            <h3>user</h3>
+                        </div>
+                        <div class="item-p">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur rem sunt, deleniti non veniam asperiores possimus aperiam minus nemo ipsam placeat nulla iste laudantium excepturi debitis. Non neque recusandae illo?</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </main>
 
-        <div class="container-webper position-relative">
-            <div class="bg-dark text-white mx-auto" id="user-web">
-                <div class="imgDeUsuario">
-                    <img src="https://static.vecteezy.com/system/resources/previews/002/475/741/non_2x/young-woman-profile-avatar-character-flat-style-icon-free-vector.jpg"
-                        alt="" class="imgUser">
-                </div>
-                <div class="userName">
-                    <h4>Laura</h4>
-                </div>
-            </div class="publica-list">
-            <div class="bg-dark text-white mx-auto m-3 p-5">
-                <div id="postList">
 
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
-    <!-- Remove the container if you want to extend the Footer to full width. -->
+    
+
+    <!--FOOTER -->
     <div class="containerFooter">
 
         <!-- Footer -->
-        <footer class="text-center text-lg-start text-white" style="background-color: #000000">
+        <footer class="text-center text-lg-start text-white" style="background-color: #bd87b8">
             <!-- Section: Social media -->
             <section class="d-flex justify-content-between p-4" style="background-color: #ffffff">
             </section>
