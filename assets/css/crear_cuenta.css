@@ -169,3 +169,42 @@ body {
     }
 
 }
+
+#alert-incor{
+    background-color: rgb(188, 70, 224) !important;
+    color: rgb(255, 255, 255) !important;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-right: 14px;
+    margin-left: 23px;
+    margin-right: 23px;
+}
+
+#alert-comple{
+    background-color: rgb(243, 125, 180) !important;
+    color: rgb(255, 255, 255) !important;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-right: 14px;
+    margin-left: 23px;
+    margin-right: 23px;
+}
+#alert-incor1{
+    background-color: rgb(188, 70, 224) !important;
+    color: rgb(255, 255, 255) !important;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-right: 14px;
+    margin-left: 23px;
+    margin-right: 23px;
+}
+
+#alert-comple1{
+    background-color: rgb(243, 125, 180) !important;
+    color: rgb(255, 255, 255) !important;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-right: 14px;
+    margin-left: 23px;
+    margin-right: 23px;
+}
