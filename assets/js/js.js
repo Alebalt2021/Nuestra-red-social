@@ -20,14 +20,26 @@ $(document).ready(function () {
         measurementId: "G-7YSF1R838F"
     };
 
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-    //Inicializar firebase
+    const alertaError = document.querySelector("#alert-incor");
+    
+    const alertaComplete = document.querySelector("#alert-comple");
+
+    const alertaError1 = document.querySelector("#alert-incor1");
+    
+    const alertaComplete1 = document.querySelector("#alert-comple1");
+
+
+    //Iniciar firebase
     firebase.initializeApp(firebaseConfig);
 
-    //Inicializar servicio de autenticación
+    //Iniciar servicio de autenticación
     const auth = firebase.auth();
+
+    // Initialize Firebase
+    //const app = initializeApp(firebaseConfig);
+    //const analytics = getAnalytics(app);
+    //Inicializar firebase
+    //firebase.initializeApp(firebaseConfig);
 
     //Login o inicio de sesión
     $("#btn-login").click(function (e) {
@@ -35,30 +47,41 @@ $(document).ready(function () {
         //Variables de inputs
         var correo = $("#mail").val();
         var clave = $("#pass").val();
-        //Usar servicio de login de firebase
-        auth
-            .signInWithEmailAndPassword(correo, clave)
-            .then(userCredential => {
-                Swal.fire({
-                    title:'Datos Correctos',
-                    text:'Preciones Ok para continuar',
-                    background:"#fff",
+
+                if(correo.length==0 || clave.length==0){
+                    alertaComplete.style.display = 'block';
+                    setTimeout(()=>{
+                        alertaComplete.style.display = 'none';
+                    },3000);  
+                    return;
+
+                //Swal.fire({
+                    //title:'Datos Correctos',
+                    //text:'Preciones Ok para continuar',
+                    //background:"#fff",
                     // color de fondo de la ventana[abajo]
-                    backdrop:true,
-                    timer:8000,
+                    //backdrop:true,
+                    //timer:8000,
                     // tiempo de ventana [abajo]
-                    timerProgressBar: true,
-                    allowOutsideClick:false,
-                    confirmButtonColor:'#6C63FF',
-                });
-                
+                    //timerProgressBar: true,
+                    //allowOutsideClick:false,
+                    //confirmButtonColor:'#6C63FF',
+                    }
+                    //Usar servicio de login de firebase
+                    auth.signInWithEmailAndPassword(correo, clave)
+                    .then(userCredential => {
+
+                    })
+
+                    .catch((error) => {
+                        let errorCode = error.code;
+                        let errorMessage = error.message;
+                        alertaError.style.display = 'block';
+                        setTimeout(()=>{
+                            alertaError.style.display = 'none';
+                        },3000);
+                })
             })
-            .catch((error) => {
-                let errorCode = error.code;
-                let errorMessage = error.message;
-                alert("Código:" + errorCode + ". Mensaje: " + errorMessage);
-            })
-    })
 
     //Singup o crear cuenta    
     $("#btn-singup").click(function (e) {
@@ -67,45 +90,27 @@ $(document).ready(function () {
         var correo = $("#mail-new").val();
         var clave = $("#pass-new").val();
 
+        if(correo.length==0 || clave.length==0){
+            alertaComplete1.style.display = 'block';
+            setTimeout(()=>{
+                alertaComplete1.style.display = 'none';
+            },3000);  
+            return;
+        }
+
         //Usar servicio de firebase para crear cuenta
-        auth
-            .createUserWithEmailAndPassword(correo, clave)
-            .then((userCredential) => {
-                //$("#login-container").show();
-                //$("#registro").hide();
-                Swal.fire({
-                    title:'Cuenta Creada',
-                    text:'Ya esta habilitada su cuenta',
-                    background:"#fff",
-                    // color de fondo de la ventana[abajo]
-                    backdrop:true,
-                    timer:8000,
-                    // tiempo de ventana [abajo]
-                    timerProgressBar: true,
-                    allowOutsideClick:false,
-                    confirmButtonColor:'#6C63FF',
-                });
+        auth.createUserWithEmailAndPassword(correo, clave)
+            .then(userCredential => {
+
             })
             .catch((error) => {
                 let errorCode = error.code;
                 let errorMessage = error.message;
-                Swal.fire({
-                    title:'Oh no!!!',
-                    text:"recuerda colocar un formato valido de correo y que la contraseña debe tener mas de 6 caracteres",
-                    background:"#fff",
-                    // color de fondo de la ventana[abajo]
-                    backdrop:true,
-                    timer:8000,
-                    // tiempo de ventana [abajo]
-                    timerProgressBar: true,
-                    allowOutsideClick:false,
-                    confirmButtonColor:'#6C63FF',
-                });
+                alertaError1.style.display = 'block';
+                setTimeout(()=>{
+                    alertaError1.style.display = 'none';
+                },3000);
             })
-
-    
-    
-            
     })
 
 //     // Desconexion de Usuarios
