@@ -208,3 +208,214 @@ body {
     margin-left: 23px;
     margin-right: 23px;
 }
+
+/* red social */
+
+.content-red-social{
+    width: 90%;
+    margin: auto;
+    background-color: rgba(241, 232, 232, 0);
+}
+
+.contet-publish{
+    margin-top: 60px;
+    background-color: rgba(243, 194, 212, 0.842);
+    border-radius: 60px;
+    padding: 40px 60px;
+}
+
+.contet-publish textarea{
+    margin: 10px auto;
+    width: 100%;
+    height: 160px;
+    border-radius: 30px;
+    font-size: 20px;
+    padding: 40px;
+    border: 2px solid rgb(255, 255, 255);
+    text-align: center;
+}
+.botones-publish{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    font-size: 18px;
+    font-family: 'Fredoka One', cursive;
+    letter-spacing: 3px
+}
+
+.botones-publish button{
+    height: 60px;
+    width: 160px;
+    margin:0 10px;
+    background-color: rgba(243, 194, 212, 0.842);
+    border-radius: 10px;
+    background: linear-gradient(90deg, #F3B1BD, #C7B3D6, #A1C4E8);
+    color: white;
+    border: white solid 1px;
+}
+
+.contet-posts-user{
+    display: flex;
+    overflow: hidden;
+}
+.user-content{
+    padding: 10px;
+    border-radius: 30px;
+    width: 100%;
+    margin:  60px auto;
+    background-color: rgba(243, 194, 212, 0.842);
+    overflow: hidden;
+}
+.content-posts-post{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin-top: 50px;
+}
+.items-post{
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.user-content{
+    text-align: center;
+}
+.user-content img{
+    height: 220px;
+    width: 220px;
+    border-radius: 70%;
+    border: 4px solid #fff
+}
+.user-content h3{
+    text-shadow: #6b2662 0px 0px 8px;
+    color: rgb(255, 255, 255);
+    font-weight: 800;
+}
+.user-parrafo{
+    background-color: rgb(255, 255, 255);
+    margin: 20px 40px;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.content-parrafo-item{
+    background-color: rgba(243, 194, 212, 0.842);
+    margin:5px 40px ;
+    border-radius: 30px;
+}
+
+
+
+.content-parrafo-item{
+    display: flex;
+    background-color: rgba(243, 194, 212, 0.842);
+    margin:10px 20px ;
+    border-radius: 30px;
+    overflow: hidden;
+    
+}
+.item-use img , .item-use h3 {
+    display: block;
+    text-align: center;
+}
+.item-use h3 {
+    margin-top: -25px;
+    color: white;
+    font-weight: 700;
+    text-shadow: #C75CB9 0px 0px 8px;
+}
+.content-parrafo-item img{
+    padding:20px;
+    height: 110px;
+    border-radius: 60px;
+}
+.content-parrafo-item p{
+    border-radius: 10px;
+    width: 96%;
+    padding: 10px 10px;
+    font-size: 14px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 20px;
+}
+
+
+
+/* RESPONSIVE */
+/* RESPONSIVE */
+@media screen and (max-width:900px) {
+    .contet-posts-user{
+        flex-direction: column;
+    }
+    /* perfil */
+    .user-content img{
+        height: 260px;
+        width: 260px;
+        border: 4px solid #fff
+    }
+    .content-posts-post{
+        margin-top: 6px;
+    }
+
+    .content-parrafo-item{
+        padding: 2px;
+    }
+    /* */
+}
+
+@media screen and (max-width:550px) {
+    .contet-publish textarea{
+        justify-content: center;
+        height: 250px;
+    }
+    .botones-publish {
+        flex-direction: column;
+        margin: 0;
+    }
+    .botones-publish button{
+        margin: 10px auto;
+        width: 70%;
+    }
+}
+
+
+
+
+@media screen and (max-width:450px) {
+    .user-content h3{
+        font-size: 35px;
+    }
+    .botones-publish button{
+        margin: 10px auto;
+        width: 90%;
+    }
+    .user-parrafo{
+        background-color: rgb(255, 255, 255);
+        margin: 20px 40px;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        font-size: 20px;
+    }
+    .content-parrafo-item p{
+        border-radius: 10px;
+        width: 96%;
+        padding: 10px 6px;
+        font-size: 10px;
+        background-color: rgb(255, 255, 255);
+        margin-top: 20px;
+        color: rgb(82, 82, 82);
+    }
+    .item-use h3 {
+        margin-top: -10px;
+        color: white;
+        font-weight: 700;
+        text-shadow: #C75CB9 0px 0px 8px;
+    }
+}
+
+
+
+
+
+

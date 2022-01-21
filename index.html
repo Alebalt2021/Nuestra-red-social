@@ -1,16 +1,458 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <!--CDN Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--CDN de iconos-->
+    <script src="https://kit.fontawesome.com/5a3c30ad6c.js" crossorigin="anonymous"></script>
+
+    <title> Kpopers</title>
+    <!--CDN de Google Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Tipografias-->
+    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mali:wght@500&display=swap" rel="stylesheet">
+    <!-- icono -->
+    <link rel="icon"
+        href="https://play-lh.googleusercontent.com/ZUGvRmS6sU9Oc4cnK7VfFQ9AJN7wI42eq1pZ3QBLJ1Y1QII6Xty9iNFcQHccX4LyCs5E">
+    <!--CSS personalizado-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+
 </head>
-<body class="content">
-    
-</body>
-    <main class="content">
+
+<body>
+    <!--HEADER-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light p-2 shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand title-pag" href="#">
+                <img src="https://play-lh.googleusercontent.com/ZUGvRmS6sU9Oc4cnK7VfFQ9AJN7wI42eq1pZ3QBLJ1Y1QII6Xty9iNFcQHccX4LyCs5E"
+                    alt="log" width="48" height="45" class="d-inline-block align-text-top">
+                KPOPERS
+            </a>
+            <form class="d-flex">
+                <button class="btn ingresar btn-close"><i class="fas fa-sign-out-alt lead me-2"></i></button>
+            </form>
+        </div>
+    </nav>
+
+    <!--MAIN-->
+
+    <!-- Login #0 -->
+    <div class="modal-dialog text-center" id="login-container">
+        <div class="col-sm-9 main-section" style="margin-top: 20%;">
+            <div class="modal-content" style="padding-bottom: 20px;">
+
+                <div class="col-12  img-login" style="margin-bottom: -8px;margin-top: -70px;">
+                    <img src="https://cdn.discordapp.com/attachments/842291717376966696/932864795961597952/00c596d5eaeabd14c9e7bd88042fa621.gif"
+                        class="" alt="Welcolme">
+                </div>
+
+                <div class="col-12 form-input">
+                    <form>
+                        <div class="form-group text-center pt-3">
+                            <h1 id="h1" class="text-light tituloM ">KPOPERS</h1>
+                        </div>
+                        
+                        <!--Alerts-->
+
+                        <div id="alert-incor" class="alert" role="alert" style="display: none;">
+                            <i class="fas fa-exclamation-triangle lead me-2"></i>Tus datos son incorrectos
+                        </div>
+
+                        <div id="alert-comple" class="alert" role="alert" style="display: none;">
+                            <i class="fas fa-exclamation-circle lead me-2"></i>
+                            Completa todos los campos
+                        </div>
+
+
+                        <div class="form-group mx-sm-4 pb-2">
+                            <input type="email" id="mail" class="form-control parrafoM"
+                                placeholder="Correo electronico">
+                        </div>
+                        <div class="form-group mx-sm-4 pb-2">
+                            <input type="password" id="pass" class="form-control parrafoM" placeholder="Contraseña">
+                        </div>
+                        <div class="form-group mx-sm-4 pb-2 ">
+                            <button id="btn-login" type="submit" class="btn btn-block ingresar"><i
+                                    class="far fa-check-circle lead"></i> INICIA SESIÓN</button>
+                            <label class="form-label condicionesM">O iniciar sesión con:</label>
+                            <div class="buttons-accont">
+                                <button><img src="assets/img/icons/svg/bxl-google.svg" alt="google"></button>
+                                <button><img src="assets/img/icons/svg/bxl-facebook.svg" alt="faceboock"></button>
+                            </div>
+                        </div>
+                        <p class="volver">¿No tienes una cuenta? <a href="#" id="btn-register">Registrarte</a></p>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!--Crear cuenta #1-->
+    <div class="modal-dialog text-center" id="registro">
+        <div class="col-sm-9 main-section" style="margin-top: 20%;">
+            <div class="modal-content" style="padding-bottom: 20px;">
+
+                <div class="col-12 user-img" style="margin-bottom: -8px;margin-top: -70px;">
+                    <img src="https://cdn.discordapp.com/attachments/842291717376966696/932996501322489986/c6ab0072827aa671e279dd179edb5f84.jpg"
+                        alt="Welcolme">
+                </div>
+
+                <div class="col-12 form-input">
+                    <form>
+                        <div class="form-group text-center pt-3">
+                            <h1 id="h1" class="text-light tituloM ">CREAR CUENTA</h1>
+                        </div>
+
+                        <!---Alerts--->
+
+                        <div id="alert-incor1" class="alert" role="alert" style="display: none;">
+                            <i class="fas fa-exclamation-triangle lead me-2"></i>
+                            Tus datos son incorrectos
+                        </div>
+
+                        <div id="alert-comple1" class="alert" role="alert" style="display: none;">
+                            <i class="fas fa-exclamation-circle lead me-2"></i>
+                            Completa todos los campos
+                        </div>
+
+                        <div class="form-group mx-sm-4 pb-2">
+                            <input id="name-new" type="text" class="form-control parrafoM"
+                                placeholder="Nombre completo">
+                        </div>
+                        <div class="form-group mx-sm-4 pb-2">
+                            <input id="mail-new" type="email" class="form-control parrafoM"
+                                placeholder="Correo electronico">
+                        </div>
+                        <div class="form-group mx-sm-4 pb-2">
+                            <input id="pass-new" type="password" class="form-control parrafoM" placeholder="Contraseña">
+                        </div>
+                        <div class="form-group mx-sm-4 pb-2">
+                            <label class="form-label condicionesM">Al registrarte, aceptas nuestras <a
+                                    href="assets/doc/Condiciones y Políticas de Privacidad.pdf">Condiciones</a> y la <a
+                                    href="assets/doc/Condiciones y Políticas de Privacidad.pdf">Politica de
+                                    datos</a>.</label>
+                            <button type="submit" id="btn-singup" class="btn btn-block ingresar"><i
+                                    class="far fa-check-circle lead me-2""></i>REGISTRATE</button>
+                        </div>
+                        <p class=" volver">¿Tienes una cuenta? <a href="#">Inicia sesión</a></p>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--FOOTER de login y main-->
+    <footer class="text-center text-white" style="background-color: #caced1;">
+        <!-- Grid container -->
+        <div class="container p-4">
+            <!-- Section: Images -->
+            <section class="">
+                <div class="row">
+                    <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                        <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9shjq6hv9SC7xeLO-i0KC6I_U-0idSlp-cS42FhVyG8yYaAxYV4X19U-sySnNg1doMkY&usqp=CAU"
+                                class="w-100" />
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.972);"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                        <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
+                            <img src="https://i.pinimg.com/474x/85/cc/67/85cc6793dc0207ca57e41c2537307d54.jpg"
+                                class="w-100" />
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(255, 153, 216, 0.726);"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                        <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
+                            <img src="https://images.hdqwalls.com/wallpapers/thumb/saboru-maid-anime-girl-4k-ah.jpg"
+                                class="w-100" />
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(255, 125, 212, 0.856);"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                        <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnmRJ_SWCy_bXIDRQ1nmIM8UjhF9aYyCDU1xxQacEDMwiWfVwf26jn4-SmyRKzOIGwX20&usqp=CAU"
+                                class="w-100" />
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(255, 192, 192, 0.876);"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                        <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
+                            <img src="https://cache.desktopnexus.com/thumbseg/2412/2412592-bigthumbnail.jpg"
+                                class="w-100" />
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(255, 140, 245, 0.822);"></div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-12 mb-4 mb-md-0">
+                        <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
+                            <img src="https://cache.desktopnexus.com/thumbseg/2444/2444065-bigthumbnail.jpg"
+                                class="w-100" />
+                            <a href="#!">
+                                <div class="mask" style="background-color: rgba(253, 184, 236, 0.89);"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        </div>
         
+
+        <!-- Copyright -->
+        <div class="text-center p-3 letraF" style="background-color: rgba(214, 118, 218, 0.87);">
+            © 2022 Copyright: Kpopers.com
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+
+
+
+    <!--  red social -->
+
+
+    <main class="content-red-social">
+        <div class="contet-publish">
+            <textarea name="" id="" cols="30" rows="10" placeholder="¿En que estas pensando?"></textarea>
+            <div class="botones-publish">
+                <button><i class="far fa-images lead me-2""></i>Agregar</button>
+                <button><i class="fas fa-plus-circle lead me-2""></i>Publicar</button>
+            </div>
+        </div>
+        <div class="contet-posts-user">
+
+            <div class="user-content">
+                <img class="align-center" src="https://cdn.discordapp.com/attachments/842291717376966696/933635850728779786/1ddc8f7b70280d9eb020237743a279a9.gif" alt="user">
+                <div class="user-parrafo">
+                    <h3>User</h3>
+                    <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio illum id natus eaque obcaecati? Veritatis, et sed praesentium error a quas neque repellendus aliquam, numquam, ea non dolor. Beatae, vitae.</p>
+                </div>
+
+            </div>
+
+            <div class="content-posts-post">
+                
+                <div class="items-post">
+                    <div class="content-parrafo-item">
+                        <div class="item-use">
+                            <img src="https://cdn.discordapp.com/attachments/842291717376966696/932995059022975066/38020d9bd6e501c1a04149bf8677fdca.jpg" alt="user">
+                            <h3>user</h3>
+                        </div>
+                        <div class="item-p">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur rem sunt, deleniti non veniam asperiores possimus aperiam minus nemo ipsam placeat nulla iste laudantium excepturi debitis. Non neque recusandae illo?</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="items-post">
+                    <div class="content-parrafo-item">
+                        <div class="item-use">
+                            <img src="https://cdn.discordapp.com/attachments/842291717376966696/932995059022975066/38020d9bd6e501c1a04149bf8677fdca.jpg" alt="user">
+                            <h3>user</h3>
+                        </div>
+                        <div class="item-p">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur rem sunt, deleniti non veniam asperiores possimus aperiam minus nemo ipsam placeat nulla iste laudantium excepturi debitis. Non neque recusandae illo?</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="items-post">
+                    <div class="content-parrafo-item">
+                        <div class="item-use">
+                            <img src="https://cdn.discordapp.com/attachments/842291717376966696/932995059022975066/38020d9bd6e501c1a04149bf8677fdca.jpg" alt="user">
+                            <h3>user</h3>
+                        </div>
+                        <div class="item-p">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur rem sunt, deleniti non veniam asperiores possimus aperiam minus nemo ipsam placeat nulla iste laudantium excepturi debitis. Non neque recusandae illo?</p>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
     </main>
+
+
+    
+
+    <!--FOOTER DE LA RED SOCIAL-->
+    <div class="containerFooter">
+
+        <!-- Footer -->
+        <footer class="text-center text-lg-start text-white letraF" style="background-color: #bd87b8">
+            <!-- Section: Social media -->
+            <section class="d-flex justify-content-between p-4" style="background-color: #ffffff">
+            </section>
+            <!-- Section: Social media -->
+
+            <!-- Section: Links  -->
+            <section class="">
+                <div class="container text-center text-md-start mt-5">
+                    <!-- Grid row -->
+                    <div class="row mt-3">
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                            <!-- Content -->
+                            <h6 class="text-uppercase fw-bold">RED SOCIAL KPOPERS</h6>
+                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                style="width: 60px; background-color: #db4dff; height: 2px" />
+                            <p>
+                                Comparte aqui tus gustos y algunas novedades coreanas.
+                                Mas que una comunidad somos una familia.
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold">PRODUCTOS</h6>
+                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                style="width: 60px; background-color: #7c4dff; height: 2px" />
+                            <p>
+                                <a class="text-white">Trivia</a>
+                            </p>
+                            <p>
+                                <a class="text-white">Codigo Enigma</a>
+                            </p>
+                            <p>
+                                <a class="text-white">Mostrando los datos</a>
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold">ENLACES UTILES</h6>
+                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                style="width: 60px; background-color: #7c4dff; height: 2px" />
+                            <p>
+                                <a class="text-white">Kpopshop.com</a>
+                            </p>
+                            <p>
+                                <a class="text-white">Iq.com</a>
+                            </p>
+                            <p>
+                                <a class="text-white">Koreabeautycosmetics.com</a>
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold">CONTACTOS</h6>
+                            <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                                style="width: 60px; background-color: #7c4dff; height: 2px" />
+                            <p><i class="fas fa-home mr-3 lead me-2"></i>Perú, Lima 0513 SMP</p>
+                            <p><i class="fas fa-envelope mr-3 lead me-2"></i>Support@kpopers.com</p>
+                        </div>
+                        <!-- Grid column -->
+                    </div>
+                    <!-- Grid row -->
+                </div>
+            </section>
+            <!-- Section: Links  -->
+
+            <!-- Copyright -->
+            <div class="text-center p-3 bold" style="background-color: rgba(0, 0, 0, 0.2)">
+                © 2022 Copyright: Kpopers.com
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+
+    </div>
+    <!-- End of .container --
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- COMIENZO DE EL CDM -->
+    <!----CDN de SweetAlert2---->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!--CDN Bootstrap JS-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <!-- ajax -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- firebase -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <!-- js normal -->
+    <script src="assets/js/js.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</body>
+
 </html>
