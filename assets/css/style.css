@@ -7,22 +7,27 @@
 .contet-publish{
     margin-top: 60px;
     background-color: rgba(243, 194, 212, 0.842);
-    border-radius: 30px;
+    border-radius: 60px;
     padding: 40px 60px;
 }
 
 .contet-publish textarea{
     margin: 10px auto;
     width: 100%;
-    height: 260px;
+    height: 160px;
     border-radius: 30px;
-    font-size: 16px;
+    font-size: 20px;
     padding: 40px;
+    border: 2px solid rgb(207, 207, 207);
+    text-align: center;
 }
 .botones-publish{
     display: flex;
     margin: auto;
     justify-content: center;
+    font-size: 18px;
+    font-family: 'Fredoka One', cursive;
+    letter-spacing: 3px
 }
 
 .botones-publish button{
@@ -33,7 +38,7 @@
     border-radius: 10px;
     background: linear-gradient(90deg, #F3B1BD, #C7B3D6, #A1C4E8);
     color: white;
-    
+    border: white solid 1px;
 }
 
 .contet-posts-user{
@@ -46,7 +51,7 @@
     width: 100%;
     margin:  60px auto;
     background-color: rgba(243, 194, 212, 0.842);
-    height: 625px;
+    height: 500px;
 }
 .content-posts-post{
     display: flex;
@@ -58,17 +63,21 @@
     width: 100%;
 }
 .user-content img{
-    margin-top: 2pc;
-    margin-left: 5pc;
+    margin-top: 1pc;
+    margin-left: 8pc;
     height: 220px;
     width: 260px;
     border-radius: 70%;
-    border: 16px solid #fff
+    border: 10px solid #fff
 }
-
+.user-content h3{
+    text-shadow: #6b2662 0px 0px 8px;
+    color: rgb(255, 255, 255);
+    font-weight: 800;
+}
 .user-parrafo{
-    background-color: rgb(243, 242, 242);
-    margin: 60px;
+    background-color: rgb(241, 238, 238);
+    margin: 20px 40px;
     border-radius: 10px;
     padding: 20px;
     text-align: center;
@@ -94,6 +103,12 @@
     display: block;
     text-align: center;
 }
+.item-use h3 {
+    margin-top: -25px;
+    color: white;
+    font-weight: 700;
+    text-shadow: #C75CB9 0px 0px 8px;
+}
 .content-parrafo-item img{
     padding:20px;
     height: 110px;
@@ -102,10 +117,10 @@
 .content-parrafo-item p{
     border-radius: 10px;
     width: 96%;
-    padding: 10px 2px;
+    padding: 10px 10px;
     font-size: 14px;
     background-color: rgba(255, 255, 255, 0.808);
-    
+    margin-top: 20px;
 }
 
 

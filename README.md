@@ -1,5 +1,5 @@
 # ❤ ᑎᑌᕮSTᖇᗩ-ᖇᕮᗪ-SOᑕIᗩᒪ 💙
-(っ◔◡◔)っ Este proyecto fue creado en grupo; es una ___aplicacion web___ que desempeñara al papel de una red social y que constara de una ___estructura colectiva___ la cual tiene un conjunto de actores(personajes) que tienen uno o más vínculos entre ellos.
+(っ◔◡◔)っ Este proyecto fue creado en grupo; es una ___aplicacion web___ que desempeñara al papel de una red social y que constara de una ___estructura colectiva___ la cual tiene un conjunto de actores(personajes) que tienen uno o más vínculos entre ellos. 
 
 Red social 🤗 / Tema central: Kpoper - Cultura coreana ✈ / Fecha de entrega limite: 30 de enero ⏰
 
@@ -16,8 +16,17 @@ Durante el proceso de diseño hablamos a través del WhatsApp para coordinar; se
 
 - **¿Cómo ᥴrᥱᥱs qᥙᥱ ᥱᥣ ρrodᥙᥴto qᥙᥱ ᥱstᥲ́s ᥴrᥱᥲᥒdo ᥱstᥲ́ rᥱsoᥣvιᥱᥒdo sᥙs ρrobᥣᥱmᥲs?** El producto que estamos creando esta resolviendo los problemas de nuestros usuarios ya que les brinda un sitio web donde puedan compartir informacion con otras personas que comparten sus gustos y a su ves puedan enterarse de las novedades coreanas en todos los ambitos. 
 
+<p align="center" float="left">
+  <img src="https://cdn.superaficionados.com/imagenes/2-los-mejores-anime-de-romance-clannad-cke.jpg" alt="Sublime's custom image" width="550" height="300"/>
+  <img src="https://acegif.com/wp-content/gif/grc2vs-8.gif" width="200" height="300" /> 
+</p>
+
 ## __ᕼISTOᖇIᗩS ᗪᕮ ᑌSᑌᗩᖇIOS__ 👩‍💼
-(Experiencias con los usuarios y conclusiones)
+Recibimos diversas repuestas satisfactorias y descubrimos que la mayoría de nuestros usuarios se sienten atraídos a una parte de la cultura coreana, en algunos casos era a la ropa, en otros al cine (películas, doramas, anime) y así. También pudimos descubrir que muchos no contaban con un sitio específico para compartir y enterarse de las últimas novedades coreanas y ya por últimos nos dieron varias recomendaciones para que la web social sea más ideal, entre ellas que la pagina estuviera en español, que se compartan imágenes surtidas, que la comunidad sea como una familia y que la rapidez de actualización sea optima.
+
+Las preguntas que realizamos fueron: ***¿Qué es lo que más te gusta de la cultura coreana?, ¿Tienes alguna página web o sitio social donde puede enterarse de las ultimas?, ¿Que te gustaría mejorar en el sitio para que sea ideal para ti?, ¿Si no tuvieras un sitio así te gustaría tenerlo? ¿por qué?***
+
+Gracias a las entrevistas realizadas, pudimos conocer diferentes historias acerca de la cultura coreana y como mejorar nuestro sitio para que sea más ideal. Agradecemos profundamente a los usuarios que participaron. 
 
 ## __ᑭᖇOTOTIᑭO ᗪᕮ ᗷᗩᒍᗩ ᖴIᗪᕮᒪIᗪᗩᗪ__ 📁
 <p float="left">
@@ -28,3 +37,8 @@ Durante el proceso de diseño hablamos a través del WhatsApp para coordinar; se
 </p>
 
 ## __ᑭᖇOTOTIᑭO ᗪᕮ ᗩᒪTᗩ ᖴIᗪᕮᒪIᗪᗩᗪ__ 🔮
+<p float="left">
+  <img src="https://github.com/Alebalt2021/Nuestra-red-social/blob/main/assets/img/Nuestra%20red%20social.png?raw=true" width="400" height="200" /> 
+  <img src="https://github.com/Alebalt2021/Nuestra-red-social/blob/main/assets/img/Nuestra%20red%20social%20(1).png?raw=true" width="400" height="200" /> 
+  <img src="https://github.com/Alebalt2021/Nuestra-red-social/blob/main/assets/img/Nuestra%20red%20social%20(2).png?raw=true" width="400" height="200" />
+</p>
