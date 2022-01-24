@@ -30,7 +30,7 @@
 
 <body>
     <!--HEADER-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light p-2 shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light p-2 shadow-sm" id="menu">
         <div class="container-fluid">
             <a class="navbar-brand title-pag" href="#">
                 <img src="https://play-lh.googleusercontent.com/ZUGvRmS6sU9Oc4cnK7VfFQ9AJN7wI42eq1pZ3QBLJ1Y1QII6Xty9iNFcQHccX4LyCs5E"
@@ -38,7 +38,7 @@
                 KPOPERS
             </a>
             <form class="d-flex">
-                <button class="btn ingresar btn-close"><i class="fas fa-sign-out-alt lead me-2"></i></button>
+                <button class="btn ingresar btn-close" id="btn-logout"><i class="fas fa-sign-out-alt lead me-2"></i></button>
             </form>
         </div>
     </nav>
@@ -58,10 +58,10 @@
                 <div class="col-12 form-input">
                     <form>
                         <div class="form-group text-center pt-3">
-                            <h1 id="h1" class="text-light tituloM ">KPOPERS</h1>
+                            <h1 class="text-light tituloM ">KPOPERS</h1>
                         </div>
                         
-                        <!--Alerts-->
+                        <!--Alerts comienzo-->
 
                         <div id="alert-incor" class="alert" role="alert" style="display: none;">
                             <i class="fas fa-exclamation-triangle lead me-2"></i>Tus datos son incorrectos
@@ -71,7 +71,7 @@
                             <i class="fas fa-exclamation-circle lead me-2"></i>
                             Completa todos los campos
                         </div>
-
+                        <!--Alerts fin-->
 
                         <div class="form-group mx-sm-4 pb-2">
                             <input type="email" id="mail" class="form-control parrafoM"
@@ -81,12 +81,12 @@
                             <input type="password" id="pass" class="form-control parrafoM" placeholder="Contraseña">
                         </div>
                         <div class="form-group mx-sm-4 pb-2 ">
-                            <button id="btn-login" type="submit" class="btn btn-block ingresar"><i
+                            <button type="submit" id="btn-login" class="btn btn-block ingresar"><i
                                     class="far fa-check-circle lead"></i> INICIA SESIÓN</button>
                             <label class="form-label condicionesM">O iniciar sesión con:</label>
                             <div class="buttons-accont">
-                                <button><img src="assets/img/icons/svg/bxl-google.svg" alt="google"></button>
-                                <button><img src="assets/img/icons/svg/bxl-facebook.svg" alt="faceboock"></button>
+                                <button><img src="assets/img/icons/svg/bxl-google.svg" alt="google" id="btn-login-google"></button>
+                                <button><img src="assets/img/icons/svg/bxl-facebook.svg" alt="faceboock" id="btn-login-facebook"></button>
                             </div>
                         </div>
                         <p class="volver">¿No tienes una cuenta? <a href="#" id="btn-register">Registrarte</a></p>
@@ -117,11 +117,11 @@
                 <div class="col-12 form-input">
                     <form>
                         <div class="form-group text-center pt-3">
-                            <h1 id="h1" class="text-light tituloM ">CREAR CUENTA</h1>
+                            <h1 class="text-light tituloM ">CREAR CUENTA</h1>
                         </div>
 
-                        <!---Alerts--->
 
+                        <!---Alerts comienzo--->
                         <div id="alert-incor1" class="alert" role="alert" style="display: none;">
                             <i class="fas fa-exclamation-triangle lead me-2"></i>
                             Tus datos son incorrectos
@@ -131,24 +131,26 @@
                             <i class="fas fa-exclamation-circle lead me-2"></i>
                             Completa todos los campos
                         </div>
+                        <!---Alerts fin--->
+
 
                         <div class="form-group mx-sm-4 pb-2">
-                            <input id="name-new" type="text" class="form-control parrafoM"
+                            <input type="text" class="form-control parrafoM"
                                 placeholder="Nombre completo">
                         </div>
                         <div class="form-group mx-sm-4 pb-2">
-                            <input id="mail-new" type="email" class="form-control parrafoM"
+                            <input type="email" id="mail-new" class="form-control parrafoM"
                                 placeholder="Correo electronico">
                         </div>
                         <div class="form-group mx-sm-4 pb-2">
-                            <input id="pass-new" type="password" class="form-control parrafoM" placeholder="Contraseña">
+                            <input type="password" id="pass-new" class="form-control parrafoM" placeholder="Contraseña">
                         </div>
                         <div class="form-group mx-sm-4 pb-2">
                             <label class="form-label condicionesM">Al registrarte, aceptas nuestras <a
                                     href="assets/doc/Condiciones y Políticas de Privacidad.pdf">Condiciones</a> y la <a
                                     href="assets/doc/Condiciones y Políticas de Privacidad.pdf">Politica de
                                     datos</a>.</label>
-                            <button type="submit" id="btn-singup" class="btn btn-block ingresar"><i
+                            <button type="submit" class="btn btn-block ingresar" id="btn-singup"><i
                                     class="far fa-check-circle lead me-2""></i>REGISTRATE</button>
                         </div>
                         <p class=" volver">¿Tienes una cuenta? <a href="#">Inicia sesión</a></p>
@@ -259,15 +261,15 @@
 
 
     <!--  red social -->
-
-
-    <main class="content-red-social">
+    <main class="content-red-social" id="content">
         <div class="contet-publish">
-            <textarea name="" id="" cols="30" rows="10" placeholder="¿En que estas pensando?"></textarea>
-            <div class="botones-publish">
-                <button><i class="far fa-images lead me-2""></i>Agregar</button>
-                <button><i class="fas fa-plus-circle lead me-2""></i>Publicar</button>
-            </div>
+            <form id="postForm" action="">
+                <textarea id="status-text" cols="30" rows="10" placeholder="¿En que estas pensando?"></textarea>
+                <div class="botones-publish">
+                    <button><i class="far fa-images lead me-2""></i>Agregar</button>
+                    <button id="btn-publish"><i class="fas fa-plus-circle lead me-2""></i>Publicar</button>
+                </div>
+            </form>
         </div>
         <div class="contet-posts-user">
 
@@ -280,7 +282,7 @@
 
             </div>
 
-            <div class="content-posts-post">
+            <div class="content-posts-post" id="desaparecido">
                 
                 <div class="items-post">
                     <div class="content-parrafo-item">
@@ -288,7 +290,7 @@
                             <img src="https://cdn.discordapp.com/attachments/842291717376966696/932995059022975066/38020d9bd6e501c1a04149bf8677fdca.jpg" alt="user">
                             <h3>user</h3>
                         </div>
-                        <div class="item-p">
+                        <div class="item-p" id="post-feed">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur rem sunt, deleniti non veniam asperiores possimus aperiam minus nemo ipsam placeat nulla iste laudantium excepturi debitis. Non neque recusandae illo?</p>
                         </div>
                     </div>
@@ -432,7 +434,7 @@
 
 
 
-    <!-- COMIENZO DE EL CDM -->
+    <!-- COMIENZO DE LOS CDN -->
     <!----CDN de SweetAlert2---->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
@@ -450,7 +452,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
 
     <!-- js normal -->
-    <script src="assets/js/js.js"></script>
+    <script src="assets/js/script.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 </body>
