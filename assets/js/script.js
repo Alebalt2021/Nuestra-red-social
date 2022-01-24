@@ -33,7 +33,18 @@ $(document).ready(function(){
         //Usar servicio de login de firebase
         auth.signInWithEmailAndPassword(correo,clave)
         .then(userCredential=>{
-            alert("Datos Correctos");
+            Swal.fire({
+                title:'Datos Correctos',
+                text:'Preciones Ok para continuar',
+                background:"#fff",
+                // color de fondo de la ventana[abajo]
+                backdrop:true,
+                timer:8000,
+                // tiempo de ventana [abajo]
+                timerProgressBar: true,
+                allowOutsideClick:false,
+                confirmButtonColor:'#f37db4',
+                })
         })
         .catch((error) =>{
             let errorCode = error.code;
@@ -53,7 +64,18 @@ $(document).ready(function(){
         .then(userCredential=>{
             $("#login-container").show();
             $("#registro").hide();
-            alert("Cuenta creada");
+            Swal.fire({
+                title:'Cuenta Creada',
+                text:'Preciones Ok para continuar',
+                background:"#fff",
+                // color de fondo de la ventana[abajo]
+                backdrop:true,
+                timer:8000,
+                // tiempo de ventana [abajo]
+                timerProgressBar: true,
+                allowOutsideClick:false,
+                confirmButtonColor:'#f37db4',
+                })
         })
         .catch((error)=>{
             let errorCode = error.code;
@@ -66,7 +88,20 @@ $(document).ready(function(){
     $("#btn-logout").click(function(e){
         e.preventDefault();
         auth.signOut().then(() => {
-            alert("Sesion Cerrada");
+            alert("");
+            Swal.fire({
+                title:'Sesion Cerrada',
+                text:'Preciones Ok para continuar',
+                background:"#fff",
+                // color de fondo de la ventana[abajo]
+                backdrop:true,
+                timer:8000,
+                // tiempo de ventana [abajo]
+                timerProgressBar: true,
+                allowOutsideClick:false,
+                confirmButtonColor:'#f37db4',
+                })
+            alert("");
             $("#content").hide();
             $("#login-container").show();
         })
