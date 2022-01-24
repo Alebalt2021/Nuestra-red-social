@@ -86,7 +86,6 @@ $(document).ready(function(){
     })
 
     var providerFace = new firebase.auth.FacebookAuthProvider();
-    providerFace.addScope('https://firebase.google.com/docs/auth/web/facebook-login');
     //Inciar sesion con Facebook
     $("#btn-login-facebook").click(function(e){
         e.preventDefault();
