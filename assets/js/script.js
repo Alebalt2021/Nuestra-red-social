@@ -229,7 +229,14 @@ $(document).ready(function(){
             data.forEach(document => {
                 let doc = document.data();
                 const divPost =`
-                <div class="caja" style='border: solid 2px rgb(209, 171, 99)'>
+    
+                <div class="items-post">
+                <div class="content-parrafo-item" style="padding-bottom: 15px;">
+                    <div class="item-use">
+                        <img src="https://cdn.discordapp.com/attachments/842291717376966696/932995059022975066/38020d9bd6e501c1a04149bf8677fdca.jpg" alt="user">
+                        <h3>user</h3>
+                    </div>
+                    <div class="item-p">
                     <p style="margin-bottom: 0px; margin-bottom: -8px;" >${doc.text}</p> <br>
                     <textarea style='display: none;'></textarea>
                     <button data-id="${document.id}" style='display: none;' class="btn btn-info btn-save-post"><i class="far fa-save lead me-2"></i>Guardar</button>
@@ -237,8 +244,11 @@ $(document).ready(function(){
 
                     <span>Publicado el: ${doc.day}/${doc.month}/${doc.year} Hora ${doc.hours}:${doc.minutes}:${doc.seconds}.</span>
                     <br>
+                    <br>
                     <button id="btn-editar" data-id="${document.id}" class="btn btn-warning btn-edit-post mt-2 mx-2"><i class="fas fa-edit lead me-2"></i>Editar</button>
                     <button id="btn-eliminar" data-id="${document.id}" class="btn btn-danger btn-delete-post mt-2"><i class="fas fa-trash-alt lead me-2"></i>Eliminar</button>
+                    </div>
+                </div>
                 </div>
                 <hr>
                 `;

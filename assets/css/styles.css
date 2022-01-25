@@ -271,6 +271,7 @@ body {
     flex-direction: column;
     overflow: hidden;
     margin-top: 50px;
+    width: 100%;
 }
 .items-post{
     width: 100%;
