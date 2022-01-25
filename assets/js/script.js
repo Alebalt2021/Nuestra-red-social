@@ -1,22 +1,22 @@
-$(document).ready(function(){
+$(document).ready(function () {
     $("#registro").hide();
     $("#content").hide();
     $("#footer-redSocial").hide();
 
-    $("#btn-register").click(function(){
+    $("#btn-register").click(function () {
         $("#login-container").hide();
         $("#registro").show();
     })
     // Your web app's Firebase configuration
     // For Firebase JS SDK v7.20.0 and later, measurementId is optional
     const firebaseConfig = {
-    apiKey: "AIzaSyAdNq0ptZ9n99DlBgOuNSTZJb-_7Vpy_YY",
-    authDomain: "red-social-kpop.firebaseapp.com",
-    projectId: "red-social-kpop",
-    storageBucket: "red-social-kpop.appspot.com",
-    messagingSenderId: "721059467341",
-    appId: "1:721059467341:web:42c2136bc1c79cf5040c04",
-    measurementId: "G-7YSF1R838F"
+        apiKey: "AIzaSyAdNq0ptZ9n99DlBgOuNSTZJb-_7Vpy_YY",
+        authDomain: "red-social-kpop.firebaseapp.com",
+        projectId: "red-social-kpop",
+        storageBucket: "red-social-kpop.appspot.com",
+        messagingSenderId: "721059467341",
+        appId: "1:721059467341:web:42c2136bc1c79cf5040c04",
+        measurementId: "G-7YSF1R838F"
     };
 
     //Inicializar Firebase
@@ -25,91 +25,125 @@ $(document).ready(function(){
     //Inicializar servicio de autentificacion
     const auth = firebase.auth();
 
+    //Alerts
+
+    const alertaError = document.querySelector("#alert-incor");
+
+    const alertaComplete = document.querySelector("#alert-comple");
+
+    const alertaError1 = document.querySelector("#alert-incor1");
+
+    const alertaComplete1 = document.querySelector("#alert-comple1");
+
     //Login o inicio de sesion
-    $("#btn-login").click(function(e){
+    $("#btn-login").click(function (e) {
         e.preventDefault();
-        
+
         //Variables de inputs
         var correo = $("#mail").val();
         var clave = $("#pass").val();
+
+        if (correo.length == 0 || clave.length == 0) {
+            alertaComplete.style.display = 'block';
+            setTimeout(() => {
+                alertaComplete.style.display = 'none';
+            }, 3000);
+            return;
+        }
+
         //Usar servicio de login de firebase
-        auth.signInWithEmailAndPassword(correo,clave)
-        .then(userCredential=>{
-            location.reload();
-            
-            Swal.fire({
-                title:'Datos Correctos',
-                icon: 'success',
-                text:'Preciones Ok para continuar',
-                background:"#fff",
-                // color de fondo de la ventana[abajo]
-                backdrop:true,
-                timer:8000,
-                // tiempo de ventana [abajo]
-                timerProgressBar: true,
-                allowOutsideClick:false,
-                confirmButtonColor:'#f37db4',
+        auth.signInWithEmailAndPassword(correo, clave)
+            .then(userCredential => {
+                location.reload();
+
+                Swal.fire({
+                    title: 'Datos Correctos',
+                    icon: 'success',
+                    text: 'Preciones Ok para continuar',
+                    background: "#fff",
+                    // color de fondo de la ventana[abajo]
+                    backdrop: true,
+                    timer: 8000,
+                    // tiempo de ventana [abajo]
+                    timerProgressBar: true,
+                    allowOutsideClick: false,
+                    confirmButtonColor: '#f37db4',
                 })
                 $("#footer-redSocial").show();
-        })
-        .catch((error) =>{
-            let errorCode = error.code;
-            let errorMessage = error.message;
-            alert("Código: "+errorCode+ ". Mensaje: "+errorMessage);
-        }) 
+            })
+            .catch((error) => {
+                let errorCode = error.code;
+                let errorMessage = error.message;
+                alertaError.style.display = 'block';
+                setTimeout(() => {
+                    alertaError.style.display = 'none';
+                }, 3000);
+            })
     })
 
     //Singup o crear cuenta
-    $("#btn-singup").click(function(e){
+    $("#btn-singup").click(function (e) {
         e.preventDefault();
         //Variables de inputs
         var correo = $("#mail-new").val();
         var clave = $("#pass-new").val();
+
+        if (correo.length == 0 || clave.length == 0) {
+            alertaComplete1.style.display = 'block';
+            setTimeout(() => {
+                alertaComplete1.style.display = 'none';
+            }, 3000);
+            return;
+        }
+
         //Usar servicio de firebase para crear cuenta
-        auth.createUserWithEmailAndPassword(correo,clave)
-        .then(userCredential=>{
-            $("#login-container").show();
-            $("#registro").hide();
-            $("#footer-login").hide();
+        auth.createUserWithEmailAndPassword(correo, clave)
+            .then(userCredential => {
+                $("#login-container").show();
+                $("#registro").hide();
+                $("#footer-login").hide();
 
 
-            Swal.fire({
-                title:'Cuenta Creada',
-                icon: 'success',
-                text:'Preciones Ok para continuar',
-                background:"#fff",
-                // color de fondo de la ventana[abajo]
-                backdrop:true,
-                timer:8000,
-                // tiempo de ventana [abajo]
-                timerProgressBar: true,
-                allowOutsideClick:false,
-                confirmButtonColor:'#f37db4',
+                Swal.fire({
+                    title: 'Cuenta Creada',
+                    icon: 'success',
+                    text: 'Preciones Ok para continuar',
+                    background: "#fff",
+                    // color de fondo de la ventana[abajo]
+                    backdrop: true,
+                    timer: 8000,
+                    // tiempo de ventana [abajo]
+                    timerProgressBar: true,
+                    allowOutsideClick: false,
+                    confirmButtonColor: '#f37db4',
                 })
-        })
-        .catch((error)=>{
-            let errorCode = error.code;
-            let errorMessage = error.message;
-            alert("Código: "+errorCode+". Mensaje: "+errorMessage);
-        })
+            })
+            .catch((error) => {
+                let errorCode = error.code;
+                let errorMessage = error.message;
+                alertaError1.style.display = 'block';
+                setTimeout(() => {
+                    alertaError1.style.display = 'none';
+                }, 3000);
+            })
     })
     //Desconexion de usuario
     //Boton LogOut
-    $("#btn-logout").click(function(e){
+    $("#btn-logout").click(function (e) {
         e.preventDefault();
         auth.signOut().then(() => {
             Swal.fire({
-                title:'Sesion Cerrada',
-                text:'Preciones Ok para continuar',
-                background:"#fff",
+                title: 'Sesion Cerrada',
+                text: 'Preciones Ok para continuar',
+                background: "#fff",
                 // color de fondo de la ventana[abajo]
-                backdrop:true,
-                timer:8000,
+                backdrop: true,
+                timer: 8000,
                 // tiempo de ventana [abajo]
                 timerProgressBar: true,
-                allowOutsideClick:false,
-                confirmButtonColor:'#f37db4',
-                })
+                allowOutsideClick: false,
+                confirmButtonColor: '#f37db4',
+            })
             $("#content").hide();
             $("#login-container").show();
             $("#footer-login").show();
@@ -119,56 +153,56 @@ $(document).ready(function(){
 
     var provider = new firebase.auth.GoogleAuthProvider();
     //Inicar sesion con GOOGLE
-    $("#btn-login-google").click(function(e){
+    $("#btn-login-google").click(function (e) {
         e.preventDefault();
         auth.signInWithPopup(provider)
-        .then(result => {
-            Swal.fire({
-                title:'Ingreso con google',
-                text:'Preciones Ok para continuar',
-                background:"#fff",
-                // color de fondo de la ventana[abajo]
-                backdrop:true,
-                timer:8000,
-                // tiempo de ventana [abajo]
-                timerProgressBar: true,
-                allowOutsideClick:false,
-                confirmButtonColor:'#f37db4',
+            .then(result => {
+                Swal.fire({
+                    title: 'Ingreso con google',
+                    text: 'Preciones Ok para continuar',
+                    background: "#fff",
+                    // color de fondo de la ventana[abajo]
+                    backdrop: true,
+                    timer: 8000,
+                    // tiempo de ventana [abajo]
+                    timerProgressBar: true,
+                    allowOutsideClick: false,
+                    confirmButtonColor: '#f37db4',
                 })
-        })
-        .catch(error =>{
-            alert(error);
-        })
+            })
+            .catch(error => {
+                alert(error);
+            })
     })
 
     var providerFace = new firebase.auth.FacebookAuthProvider();
     //Inciar sesion con Facebook
-    $("#btn-login-facebook").click(function(e){
+    $("#btn-login-facebook").click(function (e) {
         e.preventDefault();
         auth.signInWithPopup(providerFace)
-        .then(result => {
-            Swal.fire({
-                title:'Ingreso con Facebook',
-                icon: 'success',
-                text:'Preciones Ok para continuar',
-                background:"#fff",
-                // color de fondo de la ventana[abajo]
-                backdrop:true,
-                timer:8000,
-                // tiempo de ventana [abajo]
-                timerProgressBar: true,
-                allowOutsideClick:false,
-                confirmButtonColor:'#f37db4',
+            .then(result => {
+                Swal.fire({
+                    title: 'Ingreso con Facebook',
+                    icon: 'success',
+                    text: 'Preciones Ok para continuar',
+                    background: "#fff",
+                    // color de fondo de la ventana[abajo]
+                    backdrop: true,
+                    timer: 8000,
+                    // tiempo de ventana [abajo]
+                    timerProgressBar: true,
+                    allowOutsideClick: false,
+                    confirmButtonColor: '#f37db4',
                 })
-            ;
-        })
-        .catch(error =>{
-            alert(error);
-        })
+                    ;
+            })
+            .catch(error => {
+                alert(error);
+            })
     })
 
-    auth.onAuthStateChanged((user)=>{
-        if(user){
+    auth.onAuthStateChanged((user) => {
+        if (user) {
             //Sesion Iniciada
             $("#login-container").hide();
             $("#registro").hide();
@@ -176,9 +210,9 @@ $(document).ready(function(){
             $("#content").show();
             readPosts();
             $("#footer-redSocial").show();
-            
+
         }
-        else{
+        else {
             //Sesion finalizada
             $("#footer-redSocial").hide();
             $("#footer-login").show();
@@ -190,7 +224,7 @@ $(document).ready(function(){
 
     const db = firebase.firestore();
     //Publicar un nuevo estado
-    $("#btn-publish").click(function(e){
+    $("#btn-publish").click(function (e) {
         e.preventDefault();
         let postText = $("#status-text").val();
         let date = new Date();
@@ -203,43 +237,43 @@ $(document).ready(function(){
             minutes: date.getMinutes(),
             seconds: date.getSeconds(),
         })
-        .then((docRef)=>{
-            
-            Swal.fire({
-                title:'Estado publicado',
-                icon: 'success',
-                text:'Preciones Ok para continuar',
-                background:"#fff",
-                // color de fondo de la ventana[abajo]
-                backdrop:true,
-                timer:8000,
-                // tiempo de ventana [abajo]
-                timerProgressBar: true,
-                allowOutsideClick:false,
-                confirmButtonColor:'#f37db4',
+            .then((docRef) => {
+
+                Swal.fire({
+                    title: 'Estado publicado',
+                    icon: 'success',
+                    text: 'Preciones Ok para continuar',
+                    background: "#fff",
+                    // color de fondo de la ventana[abajo]
+                    backdrop: true,
+                    timer: 8000,
+                    // tiempo de ventana [abajo]
+                    timerProgressBar: true,
+                    allowOutsideClick: false,
+                    confirmButtonColor: '#f37db4',
                 })
-            $("#status-text").val('');
-            readPosts();
-        })
-        .catch((error)=>{
-            alert(error);
-        })
+                $("#status-text").val('');
+                readPosts();
+            })
+            .catch((error) => {
+                alert(error);
+            })
     })
 
-    function readPosts(){
-        db.collection("posts").get().then((posts)=>{
+    function readPosts() {
+        db.collection("posts").get().then((posts) => {
             listPosts(posts.docs);
         })
     }
 
-    function listPosts(data){
+    function listPosts(data) {
         var divContent = $("#post-feed");
         divContent.empty();
-        if(data.length > 0){
+        if (data.length > 0) {
             let content = "";
             data.forEach(document => {
                 let doc = document.data();
-                const divPost =`
+                const divPost = `
     
                 <div class="items-post">
                 <div class="content-parrafo-item" style="padding-bottom: 15px;">
@@ -272,123 +306,123 @@ $(document).ready(function(){
                 content += divPost;
             });
             divContent.append(content);
-                //Agregar listener a btn-delete
-                const btnDelete = document.querySelectorAll(".btn-delete-post");
-                btnDelete.forEach(btn=>{
-                    btn.addEventListener("click",(e)=>{
+            //Agregar listener a btn-delete
+            const btnDelete = document.querySelectorAll(".btn-delete-post");
+            btnDelete.forEach(btn => {
+                btn.addEventListener("click", (e) => {
                     const id = e.target.dataset.id;
                     DeletePost(id);
-                    })
                 })
-                const btnEdit = document.querySelectorAll(".btn-edit-post");
-                btnEdit.forEach(btn=>{
-                btn.addEventListener("click",(e)=>{
-                const id = e.target.dataset.id;
-                OpenEdit(e,id,btn);
+            })
+            const btnEdit = document.querySelectorAll(".btn-edit-post");
+            btnEdit.forEach(btn => {
+                btn.addEventListener("click", (e) => {
+                    const id = e.target.dataset.id;
+                    OpenEdit(e, id, btn);
                 })
             })
         }
     }
-    function OpenEdit(e,id,button){
+    function OpenEdit(e, id, button) {
         let parent = button.parentNode;
         let textEdit = $(parent).children().eq(2);
         let btnEdit = $(parent).children().eq(3);
         let btnCancel = $(parent).children().eq(4);
-        
+
         textEdit.show();
         btnEdit.show();
         btnCancel.show();
         $("#btn-editar").hide();
         $("#btn-eliminar").hide();
 
-        btnEdit.on("click",function(e){
-            SaveUpdate(e,id,textEdit.val())
+        btnEdit.on("click", function (e) {
+            SaveUpdate(e, id, textEdit.val())
         });
     }
-    
 
-    function DeletePost(id){
+
+    function DeletePost(id) {
         db.collection("posts").doc(id).delete().then(() => {
-            
+
             Swal.fire({
-                title:'Se ha eliminado correctamente',
+                title: 'Se ha eliminado correctamente',
                 icon: 'success',
-                text:'Preciones Ok para continuar',
-                background:"#fff",
+                text: 'Preciones Ok para continuar',
+                background: "#fff",
                 // color de fondo de la ventana[abajo]
-                backdrop:true,
-                timer:8000,
+                backdrop: true,
+                timer: 8000,
                 // tiempo de ventana [abajo]
                 timerProgressBar: true,
-                allowOutsideClick:false,
-                confirmButtonColor:'#f37db4',
-                })
+                allowOutsideClick: false,
+                confirmButtonColor: '#f37db4',
+            })
             readPosts();
         })
-        .catch((error) => {
-            console.error("Detalle del Error: ", error);
-        });
+            .catch((error) => {
+                console.error("Detalle del Error: ", error);
+            });
     }
-    function UpdatePost(id){
-        db.collection("posts").doc(id).get().then((doc)=>{
+    function UpdatePost(id) {
+        db.collection("posts").doc(id).get().then((doc) => {
             const post = doc.data();
             $("").val(item.post);
         })
-        .catch((error) => {
-            alert("Error: ", error);
-        });
+            .catch((error) => {
+                alert("Error: ", error);
+            });
     }
 
-    function SaveUpdate(e,id_post,text_new){
+    function SaveUpdate(e, id_post, text_new) {
         e.preventDefault();
         db.collection("posts").doc(id_post).update({
             text: text_new,
-        }).then(()=>{
+        }).then(() => {
             Swal.fire({
-                title:'Post Actualizado',
+                title: 'Post Actualizado',
                 icon: 'success',
-                text:'Preciones Ok para continuar',
-                background:"#fff",
+                text: 'Preciones Ok para continuar',
+                background: "#fff",
                 // color de fondo de la ventana[abajo]
-                backdrop:true,
-                timer:8000,
+                backdrop: true,
+                timer: 8000,
                 // tiempo de ventana [abajo]
                 timerProgressBar: true,
-                allowOutsideClick:false,
-                confirmButtonColor:'#f37db4',
-                })
+                allowOutsideClick: false,
+                confirmButtonColor: '#f37db4',
+            })
             readPosts();
         })
-        .catch((error)=>{
-            alert("Error:",error);
-        });
+            .catch((error) => {
+                alert("Error:", error);
+            });
 
     }
 
-    $("#btn_update").click(function(e){
+    $("#btn_update").click(function (e) {
         e.preventDefault();
         let post_upgrade = $("").val();
         let id_post = $("").val();
         db.collection("posts").doc(id_post).update({
             post: post_upgrade,
-        }).then(()=>{
+        }).then(() => {
             Swal.fire({
-                title:'Post Actualizado',
+                title: 'Post Actualizado',
                 icon: 'success',
-                text:'Preciones Ok para continuar',
-                background:"#fff",
+                text: 'Preciones Ok para continuar',
+                background: "#fff",
                 // color de fondo de la ventana[abajo]
-                backdrop:true,
-                timer:8000,
+                backdrop: true,
+                timer: 8000,
                 // tiempo de ventana [abajo]
                 timerProgressBar: true,
-                allowOutsideClick:false,
-                confirmButtonColor:'#f37db4',
-                })
+                allowOutsideClick: false,
+                confirmButtonColor: '#f37db4',
+            })
             readPosts();
         })
-        .catch((error)=>{
-            alert("Error: ", error);
-        })
+            .catch((error) => {
+                alert("Error: ", error);
+            })
     })
 })
