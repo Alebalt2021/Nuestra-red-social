@@ -36,6 +36,7 @@ $(document).ready(function(){
         .then(userCredential=>{
             Swal.fire({
                 title:'Datos Correctos',
+                icon: 'success',
                 text:'Preciones Ok para continuar',
                 background:"#fff",
                 // color de fondo de la ventana[abajo]
@@ -70,6 +71,7 @@ $(document).ready(function(){
 
             Swal.fire({
                 title:'Cuenta Creada',
+                icon: 'success',
                 text:'Preciones Ok para continuar',
                 background:"#fff",
                 // color de fondo de la ventana[abajo]
@@ -143,6 +145,7 @@ $(document).ready(function(){
         .then(result => {
             Swal.fire({
                 title:'Ingreso con Facebook',
+                icon: 'success',
                 text:'Preciones Ok para continuar',
                 background:"#fff",
                 // color de fondo de la ventana[abajo]
@@ -197,6 +200,7 @@ $(document).ready(function(){
             
             Swal.fire({
                 title:'Estado publicado',
+                icon: 'success',
                 text:'Preciones Ok para continuar',
                 background:"#fff",
                 // color de fondo de la ventana[abajo]
@@ -237,6 +241,13 @@ $(document).ready(function(){
                         <h3>user</h3>
                     </div>
                     <div class="item-p">
+                    <div class="dropdown">
+                    <label class="dropdown-toggle" data-bs-toggle="dropdown""><i class="fas fa-infinity"></i></label>
+                    <ul class="dropdown-menu">
+                    <button id="btn-editar" data-id="${document.id}" class="btn btn-edit-post mt-2 mx-2 dropdown-item"><i class="fas fa-edit lead me-2"></i>Editar</button></a></li>
+                    <button id="btn-eliminar" data-id="${document.id}" class="btn btn-delete-post mt-2 dropdown-item"><i class="fas fa-trash-alt lead me-2"></i>Eliminar</button></a></li>
+                    </ul>
+                    </div>
                     <p style="margin-bottom: 0px; margin-bottom: -8px;" >${doc.text}</p> <br>
                     <textarea style='display: none;'></textarea>
                     <button data-id="${document.id}" style='display: none;' class="btn btn-info btn-save-post"><i class="far fa-save lead me-2"></i>Guardar</button>
@@ -245,8 +256,7 @@ $(document).ready(function(){
                     <span>Publicado el: ${doc.day}/${doc.month}/${doc.year} Hora ${doc.hours}:${doc.minutes}:${doc.seconds}.</span>
                     <br>
                     <br>
-                    <button id="btn-editar" data-id="${document.id}" class="btn btn-warning btn-edit-post mt-2 mx-2"><i class="fas fa-edit lead me-2"></i>Editar</button>
-                    <button id="btn-eliminar" data-id="${document.id}" class="btn btn-danger btn-delete-post mt-2"><i class="fas fa-trash-alt lead me-2"></i>Eliminar</button>
+
                     </div>
                 </div>
                 </div>
@@ -295,6 +305,7 @@ $(document).ready(function(){
             
             Swal.fire({
                 title:'Se ha eliminado correctamente',
+                icon: 'success',
                 text:'Preciones Ok para continuar',
                 background:"#fff",
                 // color de fondo de la ventana[abajo]
@@ -328,6 +339,7 @@ $(document).ready(function(){
         }).then(()=>{
             Swal.fire({
                 title:'Post Actualizado',
+                icon: 'success',
                 text:'Preciones Ok para continuar',
                 background:"#fff",
                 // color de fondo de la ventana[abajo]
@@ -353,8 +365,20 @@ $(document).ready(function(){
         db.collection("posts").doc(id_post).update({
             post: post_upgrade,
         }).then(()=>{
-            
-            alert("Post Actualizado")
+            Swal.fire({
+                title:'Post Actualizado',
+                icon: 'success',
+                text:'Preciones Ok para continuar',
+                background:"#fff",
+                // color de fondo de la ventana[abajo]
+                backdrop:true,
+                timer:8000,
+                // tiempo de ventana [abajo]
+                timerProgressBar: true,
+                allowOutsideClick:false,
+                confirmButtonColor:'#f37db4',
+                })
+            readPosts();
         })
         .catch((error)=>{
             alert("Error: ", error);
