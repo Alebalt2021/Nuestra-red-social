@@ -28,12 +28,15 @@ $(document).ready(function(){
     //Login o inicio de sesion
     $("#btn-login").click(function(e){
         e.preventDefault();
+        
         //Variables de inputs
         var correo = $("#mail").val();
         var clave = $("#pass").val();
         //Usar servicio de login de firebase
         auth.signInWithEmailAndPassword(correo,clave)
         .then(userCredential=>{
+            location.reload();
+            
             Swal.fire({
                 title:'Datos Correctos',
                 text:'Preciones Ok para continuar',
@@ -46,6 +49,7 @@ $(document).ready(function(){
                 allowOutsideClick:false,
                 confirmButtonColor:'#f37db4',
                 })
+                $("#footer-redSocial").show();
         })
         .catch((error) =>{
             let errorCode = error.code;
@@ -64,7 +68,7 @@ $(document).ready(function(){
         auth.createUserWithEmailAndPassword(correo,clave)
         .then(userCredential=>{
             $("#login-container").show();
-            $("#registro").hide();footer-login
+            $("#registro").hide();
             $("#footer-login").hide();
 
 
@@ -168,9 +172,12 @@ $(document).ready(function(){
             $("#footer-login").hide();
             $("#content").show();
             readPosts();
+            $("#footer-redSocial").show();
+            
         }
         else{
             //Sesion finalizada
+            $("#footer-redSocial").hide();
             $("#footer-login").show();
             $("#content").hide();
             $("#desaparecido").hide();
