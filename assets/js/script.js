@@ -64,7 +64,10 @@ $(document).ready(function(){
         auth.createUserWithEmailAndPassword(correo,clave)
         .then(userCredential=>{
             $("#login-container").show();
-            $("#registro").hide();
+            $("#registro").hide();footer-login
+            $("#footer-login").hide();
+
+
             Swal.fire({
                 title:'Cuenta Creada',
                 text:'Preciones Ok para continuar',
@@ -103,6 +106,8 @@ $(document).ready(function(){
                 })
             $("#content").hide();
             $("#login-container").show();
+            $("#footer-login").show();
+
         })
     })
 
@@ -160,11 +165,13 @@ $(document).ready(function(){
             //Sesion Iniciada
             $("#login-container").hide();
             $("#registro").hide();
+            $("#footer-login").hide();
             $("#content").show();
             readPosts();
         }
         else{
             //Sesion finalizada
+            $("#footer-login").show();
             $("#content").hide();
             $("#desaparecido").hide();
             $("#login-container").show();
