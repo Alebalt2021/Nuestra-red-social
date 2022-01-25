@@ -1,6 +1,7 @@
 $(document).ready(function(){
     $("#registro").hide();
     $("#content").hide();
+    $("#footer-redSocial").hide();
 
     $("#btn-register").click(function(){
         $("#login-container").hide();
@@ -88,7 +89,6 @@ $(document).ready(function(){
     $("#btn-logout").click(function(e){
         e.preventDefault();
         auth.signOut().then(() => {
-            alert("");
             Swal.fire({
                 title:'Sesion Cerrada',
                 text:'Preciones Ok para continuar',
@@ -101,7 +101,6 @@ $(document).ready(function(){
                 allowOutsideClick:false,
                 confirmButtonColor:'#f37db4',
                 })
-            alert("");
             $("#content").hide();
             $("#login-container").show();
         })
@@ -113,7 +112,18 @@ $(document).ready(function(){
         e.preventDefault();
         auth.signInWithPopup(provider)
         .then(result => {
-            alert("Ingreso con google");
+            Swal.fire({
+                title:'Ingreso con google',
+                text:'Preciones Ok para continuar',
+                background:"#fff",
+                // color de fondo de la ventana[abajo]
+                backdrop:true,
+                timer:8000,
+                // tiempo de ventana [abajo]
+                timerProgressBar: true,
+                allowOutsideClick:false,
+                confirmButtonColor:'#f37db4',
+                })
         })
         .catch(error =>{
             alert(error);
@@ -126,7 +136,19 @@ $(document).ready(function(){
         e.preventDefault();
         auth.signInWithPopup(providerFace)
         .then(result => {
-            alert("Ingreso con Facebook");
+            Swal.fire({
+                title:'Ingreso con Facebook',
+                text:'Preciones Ok para continuar',
+                background:"#fff",
+                // color de fondo de la ventana[abajo]
+                backdrop:true,
+                timer:8000,
+                // tiempo de ventana [abajo]
+                timerProgressBar: true,
+                allowOutsideClick:false,
+                confirmButtonColor:'#f37db4',
+                })
+            ;
         })
         .catch(error =>{
             alert(error);
@@ -165,7 +187,19 @@ $(document).ready(function(){
             seconds: date.getSeconds(),
         })
         .then((docRef)=>{
-            alert("Estado publicado");
+            
+            Swal.fire({
+                title:'Estado publicado',
+                text:'Preciones Ok para continuar',
+                background:"#fff",
+                // color de fondo de la ventana[abajo]
+                backdrop:true,
+                timer:8000,
+                // tiempo de ventana [abajo]
+                timerProgressBar: true,
+                allowOutsideClick:false,
+                confirmButtonColor:'#f37db4',
+                })
             $("#status-text").val('');
             readPosts();
         })
@@ -241,7 +275,19 @@ $(document).ready(function(){
 
     function DeletePost(id){
         db.collection("posts").doc(id).delete().then(() => {
-            alert("Se ha eliminado correctamente");
+            
+            Swal.fire({
+                title:'Se ha eliminado correctamente',
+                text:'Preciones Ok para continuar',
+                background:"#fff",
+                // color de fondo de la ventana[abajo]
+                backdrop:true,
+                timer:8000,
+                // tiempo de ventana [abajo]
+                timerProgressBar: true,
+                allowOutsideClick:false,
+                confirmButtonColor:'#f37db4',
+                })
             readPosts();
         })
         .catch((error) => {
@@ -263,7 +309,18 @@ $(document).ready(function(){
         db.collection("posts").doc(id_post).update({
             text: text_new,
         }).then(()=>{
-            alert("Post Actualizado");
+            Swal.fire({
+                title:'Post Actualizado',
+                text:'Preciones Ok para continuar',
+                background:"#fff",
+                // color de fondo de la ventana[abajo]
+                backdrop:true,
+                timer:8000,
+                // tiempo de ventana [abajo]
+                timerProgressBar: true,
+                allowOutsideClick:false,
+                confirmButtonColor:'#f37db4',
+                })
             readPosts();
         })
         .catch((error)=>{
@@ -279,6 +336,7 @@ $(document).ready(function(){
         db.collection("posts").doc(id_post).update({
             post: post_upgrade,
         }).then(()=>{
+            
             alert("Post Actualizado")
         })
         .catch((error)=>{
