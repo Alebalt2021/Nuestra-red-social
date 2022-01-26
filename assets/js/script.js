@@ -54,7 +54,6 @@ $(document).ready(function () {
         //Usar servicio de login de firebase
         auth.signInWithEmailAndPassword(correo, clave)
             .then(userCredential => {
-                location.reload();
 
             })
             .catch((error) => {
@@ -217,6 +216,7 @@ $(document).ready(function () {
             $("#registro").hide();
             $("#footer-login").hide();
             $("#content").show();
+            $("#desaparecido").show();
             readPosts();
             $("#footer-redSocial").show();
 
