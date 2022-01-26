@@ -56,24 +56,6 @@ $(document).ready(function () {
             .then(userCredential => {
                 location.reload();
 
-                Swal.fire({
-                    title: 'Datos Correctos, Bienvenidos',
-                    text: 'Preciones Ok para continuar',
-                    background: "#fff",
-                    // color de fondo de la ventana[abajo]
-                    backdrop: true,
-                    timer: 8000,
-                    // tiempo de ventana [abajo]
-                    timerProgressBar: true,
-                    allowOutsideClick: false,
-                    confirmButtonColor: '#f37db4',
-
-                    imageUrl: 'assets/img/Q84E.gif',
-                    imageWidth: '300px',
-                    imageHeight: '350px',
-                    imageAlt: 'Welcolme',
-                })
-                $("#footer-redSocial").show();
             })
             .catch((error) => {
                 let errorCode = error.code;
@@ -213,6 +195,24 @@ $(document).ready(function () {
     auth.onAuthStateChanged((user) => {
         if (user) {
             //Sesion Iniciada
+            Swal.fire({
+                title: 'Datos Correctos, Bienvenidos',
+                text: 'Preciones Ok para continuar',
+                background: "#fff",
+                // color de fondo de la ventana[abajo]
+                backdrop: true,
+                timer: 8000,
+                // tiempo de ventana [abajo]
+                timerProgressBar: true,
+                allowOutsideClick: false,
+                confirmButtonColor: '#f37db4',
+
+                imageUrl: 'assets/img/Q84E.gif',
+                imageWidth: '300px',
+                imageHeight: '350px',
+                imageAlt: 'Welcolme',
+            })
+            $("#footer-redSocial").show();
             $("#login-container").hide();
             $("#registro").hide();
             $("#footer-login").hide();
