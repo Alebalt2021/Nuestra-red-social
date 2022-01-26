@@ -57,8 +57,7 @@ $(document).ready(function () {
                 location.reload();
 
                 Swal.fire({
-                    title: 'Datos Correctos',
-                    icon: 'success',
+                    title: 'Datos Correctos, Bienvenidos',
                     text: 'Preciones Ok para continuar',
                     background: "#fff",
                     // color de fondo de la ventana[abajo]
@@ -68,6 +67,11 @@ $(document).ready(function () {
                     timerProgressBar: true,
                     allowOutsideClick: false,
                     confirmButtonColor: '#f37db4',
+
+                    imageUrl: 'assets/img/Q84E.gif',
+                    imageWidth: '300px',
+                    imageHeight: '350px',
+                    imageAlt: 'Welcolme',
                 })
                 $("#footer-redSocial").show();
             })
@@ -143,6 +147,11 @@ $(document).ready(function () {
                 timerProgressBar: true,
                 allowOutsideClick: false,
                 confirmButtonColor: '#f37db4',
+
+                imageUrl: 'assets/img/Adios.gif',
+                imageWidth: '340px',
+                imageHeight: '260px',
+                imageAlt: 'Good Bye'
             })
             $("#content").hide();
             $("#login-container").show();
@@ -276,13 +285,13 @@ $(document).ready(function () {
                 const divPost = `
     
                 <div class="items-post">
-                <div class="content-parrafo-item" style="padding-bottom: 15px;">
+                <div class="content-parrafo-item" style="padding-bottom: 3px;margin-top: 10px;padding-top: 20px;padding-right: 5px;padding-left: 5px;">
                     <div class="item-use">
                         <img src="https://cdn.discordapp.com/attachments/842291717376966696/932995059022975066/38020d9bd6e501c1a04149bf8677fdca.jpg" alt="user">
                         <h3>user</h3>
                     </div>
                     <div class="item-p">
-                    <div class="dropdown">
+                    <div class="dropdown" style="top: -8px;right: 20px;">
                     <label class="dropdown-toggle" data-bs-toggle="dropdown""><i class="fas fa-infinity"></i></label>
                     <ul class="dropdown-menu">
                     <button id="btn-editar" data-id="${document.id}" class="btn btn-edit-post mt-2 mx-2 dropdown-item"><i class="fas fa-edit lead me-2"></i>Editar</button></a></li>

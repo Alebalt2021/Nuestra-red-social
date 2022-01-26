@@ -191,6 +191,10 @@ body {
 }
 
 /* red social */
+.dropdown{
+    display: flex;
+    float: right;
+}
 
 .content-red-social{
     width: 90%;
@@ -238,30 +242,34 @@ body {
 .contet-posts-user{
     display: flex;
     overflow: hidden;
+    padding-left: 600px;
 }
 .user-content{
     padding: 10px;
     border-radius: 30px;
-    width: 100%;
+    width: 550px;
     margin:  60px auto;
     background-color: rgba(243, 194, 212, 0.842);
     overflow: hidden;
+    text-align: center;
+    position: fixed;
+    top: 100px;
+    left: 0px;
 }
 .content-posts-post{
     display: flex;
     flex-direction: column;
     overflow: hidden;
     margin-top: 50px;
-    width: 100%;
+    width: 660px;
+    float: right;
 }
 .items-post{
     width: 100%;
     overflow: hidden;
     box-sizing: border-box;
 }
-.user-content{
-    text-align: center;
-}
+
 .user-content img{
     height: 220px;
     width: 220px;
