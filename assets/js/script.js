@@ -70,8 +70,8 @@ $(document).ready(function () {
                 confirmButtonColor: '#f37db4',
 
                 imageUrl: 'assets/img/Q84E.gif',
-                imageWidth: '300px',
-                imageHeight: '350px',
+                imageWidth: '340px',
+                imageHeight: '260px',
                 imageAlt: 'Welcolme',
             })
             })
@@ -177,6 +177,11 @@ $(document).ready(function () {
                     timerProgressBar: true,
                     allowOutsideClick: false,
                     confirmButtonColor: '#f37db4',
+
+                    imageUrl: 'assets/img/google.gif',
+                    imageWidth: '340px',
+                    imageHeight: '260px',
+                    imageAlt: 'Google',
                 })
             })
             .catch(error => {
@@ -202,6 +207,11 @@ $(document).ready(function () {
                     timerProgressBar: true,
                     allowOutsideClick: false,
                     confirmButtonColor: '#f37db4',
+
+                    imageUrl: 'assets/img/facebook.gif',
+                    imageWidth: '340px',
+                    imageHeight: '260px',
+                    imageAlt: 'Facebook',
                 })
                     ;
             })
