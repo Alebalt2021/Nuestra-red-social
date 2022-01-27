@@ -185,7 +185,25 @@ $(document).ready(function () {
                 })
             })
             .catch(error => {
-                alert(error);
+                Swal.fire({
+                    title: 'No se pudo ingresar',
+                    icon: 'error',
+                    text: 'Preciones Ok para continuar',
+                    background: "#fff",
+                    // color de fondo de la ventana[abajo]
+                    backdrop: true,
+                    timer: 8000,
+                    // tiempo de ventana [abajo]
+                    timerProgressBar: true,
+                    allowOutsideClick: false,
+                    confirmButtonColor: '#f37db4',
+
+                    imageUrl: 'assets/img/google.gif',
+                    imageWidth: '300px',
+                    imageHeight: '220px',
+                    imageAlt: 'Google',
+                });
+                alert.console(error);
             })
     })
 
@@ -209,14 +227,32 @@ $(document).ready(function () {
                     confirmButtonColor: '#f37db4',
 
                     imageUrl: 'assets/img/facebook.gif',
-                    imageWidth: '340px',
-                    imageHeight: '260px',
+                    imageWidth: '300px',
+                    imageHeight: '220px',
                     imageAlt: 'Facebook',
                 })
                     ;
             })
             .catch(error => {
-                alert(error);
+                Swal.fire({
+                    title: 'No se pudo ingresar',
+                    icon: 'error',
+                    text: 'Preciones Ok para continuar',
+                    background: "#fff",
+                    // color de fondo de la ventana[abajo]
+                    backdrop: true,
+                    timer: 8000,
+                    // tiempo de ventana [abajo]
+                    timerProgressBar: true,
+                    allowOutsideClick: false,
+                    confirmButtonColor: '#f37db4',
+
+                    imageUrl: 'assets/img/facebook.gif',
+                    imageWidth: '340px',
+                    imageHeight: '260px',
+                    imageAlt: 'Facebook',
+                });
+                alert.console(error);
             })
     })
 
@@ -316,13 +352,16 @@ $(document).ready(function () {
                     <textarea style='display: none;'></textarea>
                     <button data-id="${document.id}" style='display: none;' class="btn btn-info btn-save-post"><i class="far fa-save lead me-2"></i>Guardar</button>
                     <button style='display: none;' class="btn btn-info btn-cancel-post"><i class="fas fa-ban lead me-2"></i>Cancelar</button>
-
+                    
                     <span class="hora-minutos">Publicado el: ${doc.day}/${doc.month}/${doc.year} Hora ${doc.hours}:${doc.minutes}:${doc.seconds}.</span>
                     <br>
                     <br>
 
                     </div>
                 </div>
+                </div>
+                <div>
+                <button style='display: none;' class="btn btn-info btn-cancel-post"><i class="fab fa-gratipay"></i>Like</button>
                 </div>
                 <hr>
                 `;
