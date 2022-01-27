@@ -1,8 +1,11 @@
 $(document).ready(function () {
     $("#registro").hide();
     $("#content").hide();
+    $("#active-show").hide();
     $("#footer-redSocial").hide();
-
+    $("#perfil-show").click(function(){
+        $("#active-show").show();
+    });
     $("#btn-register").click(function () {
         $("#login-container").hide();
         $("#registro").show();
@@ -54,7 +57,23 @@ $(document).ready(function () {
         //Usar servicio de login de firebase
         auth.signInWithEmailAndPassword(correo, clave)
             .then(userCredential => {
+                Swal.fire({
+                title: 'Datos Correctos, Bienvenidos',
+                text: 'Preciones Ok para continuar',
+                background: "#fff",
+                // color de fondo de la ventana[abajo]
+                backdrop: true,
+                timer: 8000,
+                // tiempo de ventana [abajo]
+                timerProgressBar: true,
+                allowOutsideClick: false,
+                confirmButtonColor: '#f37db4',
 
+                imageUrl: 'assets/img/Q84E.gif',
+                imageWidth: '300px',
+                imageHeight: '350px',
+                imageAlt: 'Welcolme',
+            })
             })
             .catch((error) => {
                 let errorCode = error.code;
@@ -194,23 +213,7 @@ $(document).ready(function () {
     auth.onAuthStateChanged((user) => {
         if (user) {
             //Sesion Iniciada
-            Swal.fire({
-                title: 'Datos Correctos, Bienvenidos',
-                text: 'Preciones Ok para continuar',
-                background: "#fff",
-                // color de fondo de la ventana[abajo]
-                backdrop: true,
-                timer: 8000,
-                // tiempo de ventana [abajo]
-                timerProgressBar: true,
-                allowOutsideClick: false,
-                confirmButtonColor: '#f37db4',
-
-                imageUrl: 'assets/img/Q84E.gif',
-                imageWidth: '300px',
-                imageHeight: '350px',
-                imageAlt: 'Welcolme',
-            })
+            
             $("#footer-redSocial").show();
             $("#login-container").hide();
             $("#registro").hide();
@@ -291,14 +294,14 @@ $(document).ready(function () {
                         <h3>user</h3>
                     </div>
                     <div class="item-p">
-                    <div class="dropdown" style="top: -8px;right: 20px;">
-                    <label class="dropdown-toggle" data-bs-toggle="dropdown""><i class="fas fa-infinity"></i></label>
-                    <ul class="dropdown-menu">
-                    <button id="btn-editar" data-id="${document.id}" class="btn btn-edit-post mt-2 mx-2 dropdown-item"><i class="fas fa-edit lead me-2"></i>Editar</button></a></li>
-                    <button id="btn-eliminar" data-id="${document.id}" class="btn btn-delete-post mt-2 dropdown-item"><i class="fas fa-trash-alt lead me-2"></i>Eliminar</button></a></li>
+                        <div class="dropdown" style="top: -8px;right: 20px;">
+                        <label class="dropdown-toggle" data-bs-toggle="dropdown""><i class="fas fa-infinity"></i></label>
+                        <ul class="dropdown-menu">
+                            <button id="btn-editar" data-id="${document.id}" class="btn btn-edit-post mt-2 mx-2 dropdown-item"><i class="fas fa-edit lead me-2"></i>Editar</button></a></li>
+                            <button id="btn-eliminar" data-id="${document.id}" class="btn btn-delete-post mt-2 dropdown-item"><i class="fas fa-trash-alt lead me-2"></i>Eliminar</button></a></li>
                     </ul>
                     </div>
-                    <p style="margin-bottom: 0px; margin-bottom: -8px;" >${doc.text}</p> <br>
+                    <p id="imten-p-content" style="margin-bottom: 0px; margin-bottom: -8px;" >${doc.text}</p> <br>
                     <textarea style='display: none;'></textarea>
                     <button data-id="${document.id}" style='display: none;' class="btn btn-info btn-save-post"><i class="far fa-save lead me-2"></i>Guardar</button>
                     <button style='display: none;' class="btn btn-info btn-cancel-post"><i class="fas fa-ban lead me-2"></i>Cancelar</button>

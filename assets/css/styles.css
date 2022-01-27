@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Poppins:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap');
 body {
     background-image: url(https://s-media-cache-ak0.pinimg.com/originals/e8/50/a3/e850a34234b02d2ccece68c65aa8338a.gif);
     background-repeat: no-repeat;
@@ -240,10 +242,9 @@ body {
 }
 
 .contet-posts-user{
-    display: flex;
     overflow: hidden;
-    padding-left: 600px;
 }
+
 .user-content{
     padding: 10px;
     border-radius: 30px;
@@ -261,13 +262,16 @@ body {
     flex-direction: column;
     overflow: hidden;
     margin-top: 50px;
-    width: 660px;
+    width: 100%;
     float: right;
 }
 .items-post{
-    width: 100%;
+    margin: auto;
+    width: 75%;
     overflow: hidden;
     box-sizing: border-box;
+    font-family: "Poppins";
+    font-weight: 300
 }
 
 .user-content img{
@@ -322,11 +326,38 @@ body {
 }
 .content-parrafo-item p{
     border-radius: 10px;
-    width: 96%;
-    padding: 10px 10px;
-    font-size: 14px;
-    background-color: rgb(255, 255, 255);
+        height: 40px;
+        width: 100%;
+        padding: 10px 6px;
+        font-size: 10px;
+        background-color: rgb(255, 255, 255);
+        margin-top: 20px;
+        color: rgb(82, 82, 82);
     margin-top: 20px;
+}
+.dropdown-toggle i {
+    color: rgb(235, 235, 235);
+}
+.dropdown-menu{
+     overflow: hidden;
+     border-radius: 10px;
+}
+.btn-edit-post{
+    font-family: "Indie Flower";
+    color: rgb(109, 106, 106);
+   
+}
+.btn-edit-post i{
+    color: rgb(207, 45, 158);
+}
+.btn-delete-post{
+    font-family: "Indie Flower";
+
+    color: rgb(109, 106, 106);
+}
+.btn-delete-post i{
+    color: rgb(69, 45, 207);
+    margin-left: 9px;
 }
 
 
