@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Poppins:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pompiere&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap');
 body {
     background-image: url(https://s-media-cache-ak0.pinimg.com/originals/e8/50/a3/e850a34234b02d2ccece68c65aa8338a.gif);
@@ -324,16 +325,24 @@ body {
     height: 110px;
     border-radius: 60px;
 }
-.content-parrafo-item p{
+.hora-minutos{
+    float: right;
+    font-family: "Poppins";
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    text-shadow: #C75CB9 0px 0px 8px;
+}
+.parrafo-p{
+    font-family: "Pompiere";
     border-radius: 10px;
-        height: 40px;
-        width: 100%;
+        width: 460px;
         padding: 10px 6px;
-        font-size: 10px;
+        font-size: 24px;
         background-color: rgb(255, 255, 255);
         margin-top: 20px;
         color: rgb(82, 82, 82);
     margin-top: 20px;
+    padding:10px;
 }
 .dropdown-toggle i {
     color: rgb(235, 235, 235);
