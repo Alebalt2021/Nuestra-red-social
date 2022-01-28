@@ -3,9 +3,13 @@ $(document).ready(function () {
     $("#content").hide();
     $("#active-show").hide();
     $("#footer-redSocial").hide();
-
+    
     $("#perfil-show").click(function(){
         $("#active-show").show();
+    });
+
+    $("#btn-perfil-closet").click(function(){
+        $("#active-show").hide();
     });
 
     $("#btn-register").click(function () {
