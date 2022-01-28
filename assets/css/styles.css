@@ -221,6 +221,7 @@ body {
     padding: 40px;
     border: 2px solid rgb(255, 255, 255);
     text-align: center;
+    font-family: "Indie Flower";
 }
 .botones-publish{
     display: flex;
@@ -228,7 +229,8 @@ body {
     justify-content: center;
     font-size: 18px;
     font-family: 'Fredoka One', cursive;
-    letter-spacing: 3px
+    letter-spacing: 3px;
+    font-weight: 700;
 }
 
 .botones-publish button{
