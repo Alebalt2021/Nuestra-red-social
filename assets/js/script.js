@@ -354,6 +354,8 @@ $(document).ready(function () {
                     <div class="parrafo-p"> 
                     <p id="imten-p-content" style="margin-bottom: 0px; margin-bottom: -8px;" >${doc.text}</p>
                     </div> 
+                    <span class="hora-minutos mt-3">Publicado el: ${doc.day}/${doc.month}/${doc.year} Hora ${doc.hours}:${doc.minutes}:${doc.seconds}.</span>
+                    <br>
                     <br>
                     <textarea style='display: none;'></textarea>
                     <button data-id="${document.id}" style='display: none;' class="btn btn-info btn-save-post"><i class="far fa-save lead me-2"></i>Guardar</button>
