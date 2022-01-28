@@ -3,9 +3,11 @@ $(document).ready(function () {
     $("#content").hide();
     $("#active-show").hide();
     $("#footer-redSocial").hide();
+
     $("#perfil-show").click(function(){
         $("#active-show").show();
     });
+
     $("#btn-register").click(function () {
         $("#login-container").hide();
         $("#registro").show();
@@ -340,6 +342,7 @@ $(document).ready(function () {
                         <img src="https://cdn.discordapp.com/attachments/842291717376966696/932995059022975066/38020d9bd6e501c1a04149bf8677fdca.jpg" alt="user">
                         <h3>user</h3>
                         </div>
+                        
                         <div class="item-p">
                         <div class="dropdown" style="top: -8px;right: 20px;">
                             <label class="dropdown-toggle" data-bs-toggle="dropdown""><i class="fas fa-infinity"></i></label>
@@ -349,12 +352,13 @@ $(document).ready(function () {
                             </ul>
                         </div>
                     <div class="parrafo-p"> 
-                    <p id="imten-p-content" style="margin-bottom: 0px; margin-bottom: -8px;" >${doc.text}</p></div> <br>
-                    <textarea class="textarea-edit" style='display: none;'></textarea>
+                    <p id="imten-p-content" style="margin-bottom: 0px; margin-bottom: -8px;" >${doc.text}</p>
+                    </div> 
+                    <br>
+                    <textarea style='display: none;'></textarea>
                     <button data-id="${document.id}" style='display: none;' class="btn btn-info btn-save-post"><i class="far fa-save lead me-2"></i>Guardar</button>
                     <button style='display: none;' class="btn btn-info btn-cancel-post"><i class="fas fa-ban lead me-2"></i>Cancelar</button>
                     
-                    <span class="hora-minutos">Publicado el: ${doc.day}/${doc.month}/${doc.year} Hora ${doc.hours}:${doc.minutes}:${doc.seconds}.</span>
                     <br>
                     <br>
 
@@ -362,13 +366,12 @@ $(document).ready(function () {
                 </div>
                 </div>
                 <div>
-                <button id="btn-like"  class="btn btn-info btn-cancel-post "><i class="fab fa-gratipay"></i>Like</button>
-                <span></span>
+                
+                
                 </div>
                 
                 `;
                 content += divPost;
-                
             });
             divContent.append(content);
             //Agregar listener a btn-delete
@@ -383,29 +386,30 @@ $(document).ready(function () {
             btnEdit.forEach(btn => {
                 btn.addEventListener("click", (e) => {
                     const id = e.target.dataset.id;
-                    OpenEdit(e, id, btn);
+                    OpenEdit(id, btn);
                 })
             })
         }
     }
-    function OpenEdit(e, id, button) {
-        let parent = button.parentNode;
-        let textEdit = $(parent).children().eq(2);
-        let btnEdit = $(parent).children().eq(3);
-        let btnCancel = $(parent).children().eq(4);
-
+    function OpenEdit(id, button) {
+        let ulParent = button.parentNode;
+        let divParent = ulParent.parentNode;
+        let parent = divParent.parentNode;
+        let textEdit = $(parent).children().eq(3);
+        let btnEdit = $(parent).children().eq(4);
+        let btnCancel = $(parent).children().eq(5);
+        let btnLike = $(parent).children().eq()
+        
         textEdit.show();
         btnEdit.show();
         btnCancel.show();
-        $("#btn-editar").show();
-        $("#btn-eliminar").show();
+        $("#btn-editar").hide();
+        $("#btn-eliminar").hide();
 
         btnEdit.on("click", function (e) {
             SaveUpdate(e, id, textEdit.val())
         });
     }
-    
-
     function DeletePost(id) {
         db.collection("posts").doc(id).delete().then(() => {
 
