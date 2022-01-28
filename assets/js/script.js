@@ -407,12 +407,19 @@ $(document).ready(function () {
         textEdit.show();
         btnEdit.show();
         btnCancel.show();
-        $("#btn-editar").hide();
-        $("#btn-eliminar").hide();
 
         btnEdit.on("click", function (e) {
             SaveUpdate(e, id, textEdit.val())
         });
+
+        btnCancel.on("click", function () {
+            cancelUpdate(textEdit,btnEdit,btnCancel);
+        });
+    }
+    function cancelUpdate (textarea,buttonEdit,buttonCancel){
+        textarea.hide();
+        buttonEdit.hide();
+        buttonCancel.hide();
     }
     function DeletePost(id) {
         db.collection("posts").doc(id).delete().then(() => {
