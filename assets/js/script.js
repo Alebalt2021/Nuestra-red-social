@@ -334,19 +334,19 @@ $(document).ready(function () {
                 const divPost = `
     
                 <div class="items-post">
-                <div class="content-parrafo-item" style="padding-bottom: 3px;margin-top: 10px;padding-top: 20px;padding-right: 5px;padding-left: 5px;">
-                    <div class="item-use">
+                    <div class="content-parrafo-item" style="padding-bottom: 3px;margin-top: 10px;padding-top: 20px;padding-right: 5px;padding-left: 5px;">
+                        <div class="item-use">
                         <img src="https://cdn.discordapp.com/attachments/842291717376966696/932995059022975066/38020d9bd6e501c1a04149bf8677fdca.jpg" alt="user">
                         <h3>user</h3>
-                    </div>
-                    <div class="item-p">
+                        </div>
+                        <div class="item-p">
                         <div class="dropdown" style="top: -8px;right: 20px;">
-                        <label class="dropdown-toggle" data-bs-toggle="dropdown""><i class="fas fa-infinity"></i></label>
-                        <ul class="dropdown-menu">
-                            <button id="btn-editar" data-id="${document.id}" class="btn btn-edit-post mt-2 mx-2 dropdown-item"><i class="fas fa-edit lead me-2"></i>Editar</button></a></li>
-                            <button id="btn-eliminar" data-id="${document.id}" class="btn btn-delete-post mt-2 dropdown-item"><i class="fas fa-trash-alt lead me-2"></i>Eliminar</button></a></li>
-                    </ul>
-                    </div>
+                            <label class="dropdown-toggle" data-bs-toggle="dropdown""><i class="fas fa-infinity"></i></label>
+                            <ul class="dropdown-menu">
+                                <button id="btn-editar" data-id="${document.id}" class="btn btn-edit-post mt-2 mx-2 dropdown-item"><i class="fas fa-edit lead me-2"></i>Editar</button></a></li>
+                                <button id="btn-eliminar" data-id="${document.id}" class="btn btn-delete-post mt-2 dropdown-item"><i class="fas fa-trash-alt lead me-2"></i>Eliminar</button></a></li>
+                            </ul>
+                        </div>
                     <div class="parrafo-p"> 
                     <p id="imten-p-content" style="margin-bottom: 0px; margin-bottom: -8px;" >${doc.text}</p></div> <br>
                     <textarea style='display: none;'></textarea>
@@ -357,13 +357,13 @@ $(document).ready(function () {
                     <br>
                     <br>
 
-                    </div>
+                </div>
                 </div>
                 </div>
                 <div>
                 <button style='display: none;' class="btn btn-info btn-cancel-post"><i class="fab fa-gratipay"></i>Like</button>
                 </div>
-                <hr>
+                
                 `;
                 content += divPost;
             });

@@ -335,8 +335,8 @@ body {
 .parrafo-p{
     font-family: "Pompiere";
     border-radius: 10px;
-        width: 460px;
-        padding: 10px 6px;
+    width: 460px;
+    padding: 10px 6px;
         font-size: 24px;
         background-color: rgb(255, 255, 255);
         margin-top: 20px;
@@ -353,7 +353,8 @@ body {
 }
 .btn-edit-post{
     font-family: "Indie Flower";
-    color: rgb(109, 106, 106);
+    text-shadow: #6b2662 0px 0px 8px;
+    color: rgb(124, 119, 119);
    
 }
 .btn-edit-post i{
@@ -361,7 +362,7 @@ body {
 }
 .btn-delete-post{
     font-family: "Indie Flower";
-
+    text-shadow: #6b2662 0px 0px 8px;
     color: rgb(109, 106, 106);
 }
 .btn-delete-post i{
@@ -431,9 +432,8 @@ body {
         border-radius: 10px;
         width: 96%;
         padding: 10px 6px;
-        font-size: 10px;
+        font-size: 19px;
         background-color: rgb(255, 255, 255);
-        margin-top: 20px;
         color: rgb(82, 82, 82);
     }
     .item-use h3 {
@@ -446,6 +446,103 @@ body {
 
 
 
+@media screen and (max-width:1000px) {
+    .parrafo-p{
+        width: 650px;
+    }
+    .items-post{
+        width: 100%;
+    }
+}
 
 
+@media screen and (max-width:960px) {
+    .parrafo-p{
+        width: 610px;
+    }
+}
 
+
+@media screen and (max-width:900px) {
+    .parrafo-p{
+        width: 550px;
+    }
+}
+
+@media screen and (max-width:860px) {
+    .parrafo-p{
+        width: 510px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .parrafo-p{
+        width: 450px;
+    }
+}
+
+
+@media screen and (max-width:760px) {
+    .parrafo-p{
+        width: 410px;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .parrafo-p{
+        width: 350px;
+    }
+}
+
+@media screen and (max-width:660px) {
+    .parrafo-p{
+        width: 310px;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .parrafo-p{
+        width: 350px;
+    }
+}
+
+@media screen and (max-width:660px) {
+    .parrafo-p{
+        width: 310px;
+    }
+}
+@media screen and (max-width:600px) {
+    .parrafo-p{
+        width: 280px;
+    }
+}
+
+@media screen and (max-width:560px) {
+    .parrafo-p{
+        width: 250px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .parrafo-p{
+        width: 200px;
+    }
+}
+
+@media screen and (max-width:460px) {
+    .parrafo-p{
+        width: 180px;
+    }
+}
+
+@media screen and (max-width:430px) {
+    .parrafo-p{
+        width: 150px;
+    }
+}
+
+@media screen and (max-width:360px) {
+    .parrafo-p{
+        width: 180px;
+    }
+}
