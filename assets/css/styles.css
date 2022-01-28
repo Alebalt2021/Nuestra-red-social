@@ -245,18 +245,31 @@ body {
 .contet-posts-user{
     overflow: hidden;
 }
-
-.user-content{
+#btn-perfil-closet{
+    padding: 10px 12px;
+    background-color: rgb(236, 172, 225);
+    color: white;
+    border-radius: 10px;
+    border: white 2px solid;
+    float: left;
+}
+.content-user-parent{
+    display: flex;
+    justify-content: center;
+    
+}
+.user-content{z-index: 1000;
+    float: center;
     padding: 10px;
     border-radius: 30px;
-    width: 550px;
-    margin:  60px auto;
-    background-color: rgba(243, 194, 212, 0.842);
+    width: 50%;
+    margin:10px  auto;
+    background-color: rgb(201, 86, 128);
     overflow: hidden;
     text-align: center;
     position: fixed;
-    top: 100px;
-    left: 0px;
+    
+    
 }
 .content-posts-post{
     display: flex;
