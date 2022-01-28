@@ -369,7 +369,10 @@ body {
     color: rgb(69, 45, 207);
     margin-left: 9px;
 }
-
+.textarea-edit{
+    width: 100px;
+    background-color: rgb(179, 128, 143);
+}
 
 
 /* RESPONSIVE */

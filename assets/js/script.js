@@ -10,6 +10,7 @@ $(document).ready(function () {
         $("#login-container").hide();
         $("#registro").show();
     })
+    
     // Your web app's Firebase configuration
     // For Firebase JS SDK v7.20.0 and later, measurementId is optional
     const firebaseConfig = {
@@ -349,7 +350,7 @@ $(document).ready(function () {
                         </div>
                     <div class="parrafo-p"> 
                     <p id="imten-p-content" style="margin-bottom: 0px; margin-bottom: -8px;" >${doc.text}</p></div> <br>
-                    <textarea style='display: none;'></textarea>
+                    <textarea class="textarea-edit" style='display: none;'></textarea>
                     <button data-id="${document.id}" style='display: none;' class="btn btn-info btn-save-post"><i class="far fa-save lead me-2"></i>Guardar</button>
                     <button style='display: none;' class="btn btn-info btn-cancel-post"><i class="fas fa-ban lead me-2"></i>Cancelar</button>
                     
@@ -361,11 +362,13 @@ $(document).ready(function () {
                 </div>
                 </div>
                 <div>
-                <button style='display: none;' class="btn btn-info btn-cancel-post"><i class="fab fa-gratipay"></i>Like</button>
+                <button id="btn-like"  class="btn btn-info btn-cancel-post "><i class="fab fa-gratipay"></i>Like</button>
+                <span></span>
                 </div>
                 
                 `;
                 content += divPost;
+                
             });
             divContent.append(content);
             //Agregar listener a btn-delete
@@ -394,14 +397,14 @@ $(document).ready(function () {
         textEdit.show();
         btnEdit.show();
         btnCancel.show();
-        $("#btn-editar").hide();
-        $("#btn-eliminar").hide();
+        $("#btn-editar").show();
+        $("#btn-eliminar").show();
 
         btnEdit.on("click", function (e) {
             SaveUpdate(e, id, textEdit.val())
         });
     }
-
+    
 
     function DeletePost(id) {
         db.collection("posts").doc(id).delete().then(() => {
@@ -460,6 +463,9 @@ $(document).ready(function () {
             });
 
     }
+            $("#btn-like").click(function () {
+                console.log("clik")
+            })
 
     $("#btn_update").click(function (e) {
         e.preventDefault();
