@@ -363,14 +363,14 @@ body {
     color: rgb(235, 235, 235);
 }
 .dropdown-menu{
-     overflow: hidden;
-     border-radius: 10px;
+    overflow: hidden;
+    border-radius: 10px;
 }
 .btn-edit-post{
     font-family: "Indie Flower";
     text-shadow: #6b2662 0px 0px 8px;
     color: rgb(124, 119, 119);
-   
+
 }
 .btn-edit-post i{
     color: rgb(207, 45, 158);
@@ -387,6 +387,11 @@ body {
 .textarea-edit{
     width: 100px;
     background-color: rgb(179, 128, 143);
+}
+.btn-info{
+    background-color: #d34dc1 !important;
+    border: rgb(245, 242, 238) !important;
+    color: rgb(255, 255, 255);
 }
 
 
