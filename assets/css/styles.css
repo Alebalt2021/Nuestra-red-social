@@ -341,11 +341,13 @@ body {
     border-radius: 60px;
 }
 .hora-minutos{
-    float: right;
     font-family: "Poppins";
     color: rgb(255, 255, 255);
     font-weight: 600;
     text-shadow: #C75CB9 0px 0px 8px;
+    padding: 6px 20px;
+    border-radius: 5px;
+    float:right;
 }
 .parrafo-p{
     font-family: "Pompiere";

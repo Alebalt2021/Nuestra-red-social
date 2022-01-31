@@ -358,14 +358,11 @@ $(document).ready(function () {
                     <div class="parrafo-p"> 
                     <p id="imten-p-content" style="margin-bottom: 0px; margin-bottom: -8px;" >${doc.text}</p>
                     </div> 
-                    <span class="hora-minutos mt-3">Publicado el: ${doc.day}/${doc.month}/${doc.year} Hora ${doc.hours}:${doc.minutes}:${doc.seconds}.</span>
-                    <br>
                     <br>
                     <textarea style='display: none;'></textarea>
                     <button data-id="${document.id}" style='display: none;' class="btn btn-info btn-save-post"><i class="far fa-save lead me-2"></i>Guardar</button>
                     <button style='display: none;' class="btn btn-info btn-cancel-post"><i class="fas fa-ban lead me-2"></i>Cancelar</button>
-                    
-                    <br>
+                    <span class="hora-minutos mt-3">Publicado el: ${doc.day}/${doc.month}/${doc.year} Hora ${doc.hours}:${doc.minutes}:${doc.seconds}.</span>
                     <br>
 
                 </div>
@@ -409,19 +406,19 @@ $(document).ready(function () {
         textEdit.show();
         btnEdit.show();
         btnCancel.show();
+        $("#btn-editar").hide();
+        $("#btn-eliminar").hide();
+        btnCancel.on("click", function (e) {
+        
+        textEdit.hide();
+        btnEdit.hide();
+        btnCancel.hide();
 
+        });
         btnEdit.on("click", function (e) {
             SaveUpdate(e, id, textEdit.val())
         });
-
-        btnCancel.on("click", function () {
-            cancelUpdate(textEdit,btnEdit,btnCancel);
-        });
-    }
-    function cancelUpdate (textarea,buttonEdit,buttonCancel){
-        textarea.hide();
-        buttonEdit.hide();
-        buttonCancel.hide();
+        
     }
     function DeletePost(id) {
         db.collection("posts").doc(id).delete().then(() => {
